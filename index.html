@@ -9,7 +9,7 @@
     <meta content="" name="keywords" />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/logonavbar.png" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Google Fonts -->
@@ -36,7 +36,6 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
-    
 
     <!-- =======================================================
   * Template Name: NiceAdmin - v2.4.1
@@ -51,7 +50,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
       <div class="d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
-          <img src="assets/img/logonavbar.png" alt="">
+          <img src="assets/img/logonavbar.png" alt="" />
           <span class="d-none d-lg-block">WISBER</span>
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -78,8 +77,8 @@
                 alt="Profile"
                 class="rounded-circle"
               />
-              <span class="d-none d-md-block dropdown-toggle ps-2"
-                > Desa</span
+              <span class="d-none d-md-block dropdown-toggle ps-2">
+                Desa</span
               > </a
             ><!-- End Profile Iamge Icon -->
 
@@ -176,7 +175,7 @@
             data-bs-parent="#sidebar-nav"
           >
             <li>
-              <a href="components-alerts.html">
+              <a href="validasi.html">
                 <i class="bi bi-circle"></i><span>Validasi</span>
               </a>
             </li>
@@ -219,12 +218,10 @@
         <!-- End Forms Nav -->
 
         <li class="nav-item">
-          <a
-            class="nav-link collapsed " href="datauser.html">
+          <a class="nav-link collapsed" href="datauser.html">
             <i class="bi bi-layout-text-window-reverse"></i>
             <span>Data User</span>
           </a>
-          
         </li>
         <!-- End Tables Nav -->
 
@@ -273,71 +270,64 @@
         <div class="row">
           <div class="col-md-8">
             <div class="card">
-
               <div class="card-body">
                 <h5 class="card-title">Kunjungan Wisatawan di Kota Jember</h5>
 
                 <!-- Line Chart -->
-                <div id="reportsChart"></div>
+                <div id="kunjunganChart"></div>
 
                 <script>
                   document.addEventListener("DOMContentLoaded", () => {
-                    new ApexCharts(document.querySelector("#reportsChart"), {
-                      series: [{
-                        name: 'Sales',
-                        data: [31, 40, 28, 51, 42, 82],
-                      }],
+                    new ApexCharts(document.querySelector("#kunjunganChart"), {
+                      series: [
+                        {
+                          name: "Wisatawan",
+                          data: [10, 41, 35, 51, 49, 62],
+                        },
+                      ],
                       chart: {
                         height: 350,
-                        type: 'area',
-                        toolbar: {
-                          show: false
+                        type: "line",
+                        zoom: {
+                          enabled: false,
                         },
-                      },
-                      markers: {
-                        size: 4
-                      },
-                      colors: ['#4154f1', '#2eca6a', '#ff771d'],
-                      fill: {
-                        type: "gradient",
-                        gradient: {
-                          shadeIntensity: 1,
-                          opacityFrom: 0.3,
-                          opacityTo: 0.4,
-                          stops: [0, 90, 100]
-                        }
                       },
                       dataLabels: {
-                        enabled: false
+                        enabled: false,
                       },
                       stroke: {
-                        curve: 'smooth',
-                        width: 2
+                        curve: "straight",
+                      },
+                      grid: {
+                        row: {
+                          colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
+                          opacity: 0.5,
+                        },
                       },
                       xaxis: {
-                        type: 'date',
-                        categories: ["2017", "2018", "2019", "2020", "2021", "2022"]
+                        categories: [
+                          "2017",
+                          "2018",
+                          "2019",
+                          "2020",
+                          "2021",
+                          "2022",
+                        ],
                       },
-                      tooltip: {
-                        x: {
-                          format: 'yy'
-                        },
-                      }
                     }).render();
                   });
                 </script>
                 <!-- End Line Chart -->
-
               </div>
-
-            </div>            
+            </div>
           </div>
 
           <div class="col-6 col-md-4">
             <div class="card recent-sales overflow-auto">
-
               <div class="filter">
-                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <a class="icon" href="#" data-bs-toggle="dropdown"
+                  ><i class="bi bi-three-dots"></i
+                ></a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                   <li class="dropdown-header text-start">
                     <h6>Filter</h6>
@@ -351,23 +341,19 @@
 
               <div class="card-body">
                 <h5 class="card-title">Notifikasi <span>| Today</span></h5>
-                
-                
-
               </div>
-
             </div>
           </div>
-
         </div>
-      
+
         <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
         <div class="row">
           <div class="col-6 col-md-4">
             <div class="card recent-sales overflow-auto">
-
               <div class="filter">
-                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <a class="icon" href="#" data-bs-toggle="dropdown"
+                  ><i class="bi bi-three-dots"></i
+                ></a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                   <li class="dropdown-header text-start">
                     <h6>Filter</h6>
@@ -381,17 +367,16 @@
 
               <div class="card-body">
                 <h5 class="card-title">Recent Sales <span>| Today</span></h5>
-
               </div>
-
             </div>
           </div>
 
           <div class="col-6 col-md-4">
             <div class="card recent-sales overflow-auto">
-
               <div class="filter">
-                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <a class="icon" href="#" data-bs-toggle="dropdown"
+                  ><i class="bi bi-three-dots"></i
+                ></a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                   <li class="dropdown-header text-start">
                     <h6>Filter</h6>
@@ -405,17 +390,16 @@
 
               <div class="card-body">
                 <h5 class="card-title">Recent Sales <span>| Today</span></h5>
-
               </div>
-
             </div>
           </div>
-          
+
           <div class="col-6 col-md-4">
             <div class="card recent-sales overflow-auto">
-
               <div class="filter">
-                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <a class="icon" href="#" data-bs-toggle="dropdown"
+                  ><i class="bi bi-three-dots"></i
+                ></a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                   <li class="dropdown-header text-start">
                     <h6>Filter</h6>
@@ -435,62 +419,64 @@
                   // Data
                   document.addEventListener("DOMContentLoaded", () => {
                     new ApexCharts(document.querySelector("#reportsChart2"), {
-                      series: [{
-                        name: 'Sales',
-                        data: [31, 40, 28, 51, 42, 82],
-                      }],
+                      series: [
+                        {
+                          name: "Sales",
+                          data: [31, 40, 28, 51, 42, 82],
+                        },
+                      ],
                       chart: {
                         height: 200,
-                        type: 'area',
+                        type: "area",
                         toolbar: {
-                          show: false
+                          show: false,
                         },
                       },
                       markers: {
-                        size: 4
+                        size: 4,
                       },
-                      colors: ['#4154f1', '#2eca6a', '#ff771d'],
+                      colors: ["#4154f1", "#2eca6a", "#ff771d"],
                       fill: {
                         type: "gradient",
                         gradient: {
                           shadeIntensity: 1,
                           opacityFrom: 0.3,
                           opacityTo: 0.4,
-                          stops: [0, 90, 100]
-                        }
+                          stops: [0, 90, 100],
+                        },
                       },
                       dataLabels: {
-                        enabled: false
+                        enabled: false,
                       },
                       stroke: {
-                        curve: 'smooth',
-                        width: 2
+                        curve: "smooth",
+                        width: 2,
                       },
                       xaxis: {
-                        type: 'date',
-                        categories: ["Jun", "Jul", "Agu", "Sep", "Okt", "Nov"]
+                        type: "date",
+                        categories: ["Jun", "Jul", "Agu", "Sep", "Okt", "Nov"],
                       },
                       tooltip: {
                         x: {
-                          format: 'MM'
+                          format: "MM",
                         },
-                      }
+                      },
                     }).render();
                   });
                 </script>
               </div>
-
             </div>
           </div>
         </div>
-      
+
         <!-- Columns are always 50% wide, on mobile and desktop -->
         <div class="row">
           <div class="col-md-8">
             <div class="card recent-sales overflow-auto">
-
               <div class="filter">
-                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <a class="icon" href="#" data-bs-toggle="dropdown"
+                  ><i class="bi bi-three-dots"></i
+                ></a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                   <li class="dropdown-header text-start">
                     <h6>Filter</h6>
@@ -504,17 +490,16 @@
 
               <div class="card-body">
                 <h5 class="card-title">Recent Sales <span>| Today</span></h5>
-
               </div>
-
             </div>
           </div>
 
           <div class="col-6 col-md-4">
             <div class="card recent-sales overflow-auto">
-
               <div class="filter">
-                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <a class="icon" href="#" data-bs-toggle="dropdown"
+                  ><i class="bi bi-three-dots"></i
+                ></a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                   <li class="dropdown-header text-start">
                     <h6>Filter</h6>
@@ -534,51 +519,52 @@
                   // Data
                   document.addEventListener("DOMContentLoaded", () => {
                     new ApexCharts(document.querySelector("#reportsChart3"), {
-                      series: [{
-                        name: 'Sales',
-                        data: [31, 40, 28, 51, 42, 82],
-                      }],
+                      series: [
+                        {
+                          name: "Sales",
+                          data: [31, 40, 28, 51, 42, 82],
+                        },
+                      ],
                       chart: {
                         height: 200,
-                        type: 'area',
+                        type: "area",
                         toolbar: {
-                          show: false
+                          show: false,
                         },
                       },
                       markers: {
-                        size: 4
+                        size: 4,
                       },
-                      colors: ['#4154f1', '#2eca6a', '#ff771d'],
+                      colors: ["#4154f1", "#2eca6a", "#ff771d"],
                       fill: {
                         type: "gradient",
                         gradient: {
                           shadeIntensity: 1,
                           opacityFrom: 0.3,
                           opacityTo: 0.4,
-                          stops: [0, 90, 100]
-                        }
+                          stops: [0, 90, 100],
+                        },
                       },
                       dataLabels: {
-                        enabled: false
+                        enabled: false,
                       },
                       stroke: {
-                        curve: 'smooth',
-                        width: 2
+                        curve: "smooth",
+                        width: 2,
                       },
                       xaxis: {
-                        type: 'date',
-                        categories: ["Jun", "Jul", "Agu", "Sep", "Okt", "Nov"]
+                        type: "date",
+                        categories: ["Jun", "Jul", "Agu", "Sep", "Okt", "Nov"],
                       },
                       tooltip: {
                         x: {
-                          format: 'MM'
+                          format: "MM",
                         },
-                      }
+                      },
                     }).render();
                   });
                 </script>
               </div>
-
             </div>
           </div>
         </div>
