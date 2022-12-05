@@ -58,14 +58,7 @@
       <!-- End Logo -->
 
       <nav class="header-nav ms-auto">
-        <ul class="d-flex align-items-center">
-          <li class="nav-item d-block d-lg-none">
-            <a class="nav-link nav-icon search-bar-toggle" href="#">
-              <i class="bi bi-search"></i>
-            </a>
-          </li>
-          <!-- End Search Icon-->
-
+        <ul class="d-flex align-items-center">    
           <li class="nav-item dropdown pe-3">
             <a
               class="nav-link nav-profile d-flex align-items-center pe-0"
@@ -77,68 +70,11 @@
                 alt="Profile"
                 class="rounded-circle"
               />
-              <span class="d-none d-md-block dropdown-toggle ps-2">
-                Desa</span
-              > </a
-            ><!-- End Profile Iamge Icon -->
-
-            <ul
-              class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile"
-            >
-              <li class="dropdown-header">
-                <h6>Kevin Anderson</h6>
-                <span>Web Designer</span>
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-
-              <li>
-                <a
-                  class="dropdown-item d-flex align-items-center"
-                  href="users-profile.html"
-                >
-                  <i class="bi bi-person"></i>
-                  <span>My Profile</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-
-              <li>
-                <a
-                  class="dropdown-item d-flex align-items-center"
-                  href="users-profile.html"
-                >
-                  <i class="bi bi-gear"></i>
-                  <span>Account Settings</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-
-              <li>
-                <a
-                  class="dropdown-item d-flex align-items-center"
-                  href="pages-faq.html"
-                >
-                  <i class="bi bi-question-circle"></i>
-                  <span>Need Help?</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-
-              <li>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <i class="bi bi-box-arrow-right"></i>
-                  <span>Sign Out</span>
-                </a>
-              </li>
-            </ul>
+              <span class="d-none d-md-block ps-2">
+                Admin</span
+              > </a>
+              <!-- End Profile Iamge Icon -->
+            
             <!-- End Profile Dropdown Items -->
           </li>
           <!-- End Profile Nav -->
@@ -153,7 +89,7 @@
       <ul class="sidebar-nav" id="sidebar-nav">
         <li class="nav-item">
           <a class="nav-link" href="index.html">
-            <i class="bi bi-grid"></i>
+            <i class="bi bi-house-door-fill"></i>
             <span>Dashboard</span>
           </a>
         </li>
@@ -166,7 +102,7 @@
             data-bs-toggle="collapse"
             href="#"
           >
-            <i class="bi bi-menu-button-wide"></i><span>Wisata</span
+            <i class="bi bi-table"></i><span>Wisata</span
             ><i class="bi bi-chevron-down ms-auto"></i>
           </a>
           <ul
@@ -195,7 +131,7 @@
             data-bs-toggle="collapse"
             href="#"
           >
-            <i class="bi bi-journal-text"></i><span>Pengaduan</span
+            <i class="bi bi-send-exclamation"></i><span>Pengaduan</span
             ><i class="bi bi-chevron-down ms-auto"></i>
           </a>
           <ul
@@ -219,7 +155,7 @@
 
         <li class="nav-item">
           <a class="nav-link collapsed" href="datauser.html">
-            <i class="bi bi-layout-text-window-reverse"></i>
+            <i class="bi bi-people-fill"></i>
             <span>Data User</span>
           </a>
         </li>
@@ -229,7 +165,7 @@
 
         <li class="nav-item">
           <a class="nav-link collapsed" href="users-profile.html">
-            <i class="bi bi-person"></i>
+            <i class="bi bi-person-fill"></i>
             <span>Profile</span>
           </a>
         </li>
@@ -237,7 +173,7 @@
 
         <li class="nav-item">
           <a class="nav-link collapsed" href="pages-faq.html">
-            <i class="bi bi-question-circle"></i>
+            <i class="bi bi-question-circle-fill"></i>
             <span>F.A.Q</span>
           </a>
         </li>
@@ -245,8 +181,8 @@
 
         <li class="nav-item">
           <a class="nav-link collapsed" href="pages-contact.html">
-            <i class="bi bi-envelope"></i>
-            <span>Contact</span>
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Log Out</span>
           </a>
         </li>
         <!-- End Contact Page Nav -->
@@ -291,7 +227,21 @@
                   </td>
                   <td>Disetujui</td>
                   <td>
-                    <a href="#"><i class="bi bi-eye"></i></a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-eye"></i></a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Data</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            ...
+                          </div>                    
+                        </div>
+                      </div>
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -305,7 +255,7 @@
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
       <div class="copyright">
-        &copy; Copyright <strong><span>NiceAdmin</span></strong
+        &copy; Copyright <strong><span>WISBER</span></strong
         >. All Rights Reserved
       </div>
       <div class="credits">
