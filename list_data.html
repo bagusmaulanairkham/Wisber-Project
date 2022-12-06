@@ -172,15 +172,7 @@
         <!-- End Profile Page Nav -->
 
         <li class="nav-item">
-          <a class="nav-link collapsed" href="pages-faq.html">
-            <i class="bi bi-question-circle-fill"></i>
-            <span>F.A.Q</span>
-          </a>
-        </li>
-        <!-- End F.A.Q Page Nav -->
-
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="pages-contact.html">
+          <a class="nav-link collapsed" data-bs-toggle="modal" data-bs-target="#logoutModal">
             <i class="bi bi-box-arrow-right"></i>
             <span>Log Out</span>
           </a>
@@ -189,6 +181,29 @@
       </ul>
     </aside>
     <!-- End Sidebar-->
+
+    <!-- Small modal -->
+    <div class="container">
+      <div class="modal" id="logoutModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Log Out</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p><i class="fa fa-question-circle"></i>Apakah Anda yakin ingin keluar? <br /></p>
+              <div class="actionsBtns d-flex justify-content-center">
+                  <form action="/logout" method="post">
+                      <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                      <input type="submit" class="btn btn-default btn-primary" data-dismiss="modal" value="Keluar" />                    
+                  </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
 
     <main id="main" class="main">
       <div class="pagetitle">
@@ -237,7 +252,63 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                            ...
+                            <div class="row">
+                              <div class="col">
+                                <div class="mb-3">
+                                  <label for="exampleFormControlInput1" class="form-label"><strong>ID User</strong></label>
+                                  <input type="email" class="form-control" id="id_user">
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="mb-3">
+                                  <label for="exampleFormControlInput1" class="form-label"><strong>Nama Wisata</strong></label>
+                                  <input type="email" class="form-control" id="nama_wisata">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col">
+                                <div class="mb-3">
+                                  <label for="exampleFormControlInput1" class="form-label"><strong>Alamat</strong></label>
+                                  <input type="email" class="form-control" id="alamat">
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="mb-3">
+                                  <label for="exampleFormControlInput1" class="form-label"><strong>Kategori</strong></label>
+                                  <input type="email" class="form-control" id="kategori">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col">
+                                <div class="mb-3">
+                                  <label for="exampleFormControlInput1" class="form-label"><strong>Luas</strong></label>
+                                  <input type="email" class="form-control" id="luas">
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="mb-3">
+                                  <label for="exampleFormControlInput1" class="form-label"><strong>Penanggung Jawab</strong></label>
+                                  <input type="email" class="form-control" id="penanggung_jawab">
+                                </div>
+                              </div>
+                            </div>
+                            <p class="d-flex justify-content-center"><strong>Fasilitas</strong></p>
+                            <div class="row ">
+                              <div class="col">
+                                <img src="" alt="">
+                                <p>keterangan</p>
+                              </div>
+                              <div class="col">
+                                <img src="" alt="">
+                                <p>keterangan</p>
+                              </div>
+                              <div class="col">
+                                <img src="" alt="">
+                                <p>keterangan</p>
+                              </div>
+                            </div>
                           </div>                    
                         </div>
                       </div>
