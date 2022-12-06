@@ -1,3 +1,32 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@saniaauliyana 
+bagusmaulanairkham
+/
+Wisber-Project
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Wisber-Project/index.html
+@sania1601
+sania1601 edit sidenav and header nav
+Latest commit 89b5abf 1 hour ago
+ History
+ 1 contributor
+607 lines (559 sloc)  21.3 KB
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -238,7 +267,7 @@
         <!-- End Profile Page Nav -->
 
         <li class="nav-item">
-          <a class="nav-link collapsed" href="pages-contact.html">
+          <a class="nav-link collapsed" data-bs-toggle="modal" data-bs-target="#logoutModal">
             <i class="bi bi-box-arrow-right"></i>
             <span>Log Out</span>
           </a>
@@ -247,6 +276,29 @@
       </ul>
     </aside>
     <!-- End Sidebar-->
+
+    <!-- Small modal -->
+    <div class="container">
+      <div class="modal" id="logoutModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Log Out</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p><i class="fa fa-question-circle"></i>Apakah Anda yakin ingin keluar? <br /></p>
+              <div class="actionsBtns d-flex justify-content-center">
+                  <form action="/logout" method="post">
+                      <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                      <input type="submit" class="btn btn-default btn-primary" data-dismiss="modal" value="Keluar" />                    
+                  </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
 
     <main id="main" class="main">
       <div class="pagetitle">
