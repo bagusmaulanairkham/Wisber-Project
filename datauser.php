@@ -82,103 +82,9 @@
     </header>
     <!-- End Header -->
 
-    <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
-      <ul class="sidebar-nav" id="sidebar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">
-            <i class="bi bi-house-door-fill"></i>
-            <span>Dashboard</span>
-          </a>
-        </li>
-        <!-- End Dashboard Nav -->
-
-        <li class="nav-item">
-          <a
-            class="nav-link collapsed"
-            data-bs-target="#components-nav"
-            data-bs-toggle="collapse"
-            href="#"
-          >
-            <i class="bi bi-table"></i><span>Wisata</span
-            ><i class="bi bi-chevron-down ms-auto"></i>
-          </a>
-          <ul
-            id="components-nav"
-            class="nav-content collapse"
-            data-bs-parent="#sidebar-nav"
-          >
-            <li>
-              <a href="validasi.html">
-                <i class="bi bi-circle"></i><span>Validasi</span>
-              </a>
-            </li>
-            <li>
-              <a href="list_data.html">
-                <i class="bi bi-circle"></i><span>List Data</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <!-- End Components Nav -->
-
-        <li class="nav-item">
-          <a
-            class="nav-link collapsed"
-            data-bs-target="#forms-nav"
-            data-bs-toggle="collapse"
-            href="#"
-          >
-            <i class="bi bi-send-exclamation"></i><span>Pengaduan</span
-            ><i class="bi bi-chevron-down ms-auto"></i>
-          </a>
-          <ul
-            id="forms-nav"
-            class="nav-content collapse"
-            data-bs-parent="#sidebar-nav"
-          >
-            <li>
-              <a href="forms-elements.html">
-                <i class="bi bi-circle"></i><span>List Pengaduan</span>
-              </a>
-            </li>
-            <li>
-              <a href="forms-layouts.html">
-                <i class="bi bi-circle"></i><span>Feedback</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <!-- End Forms Nav -->
-
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="datauser.html">
-            <i class="bi bi-people-fill"></i>
-            <span>Data User</span>
-          </a>
-        </li>
-        <!-- End Tables Nav -->
-
-        <li class="nav-heading">Pages</li>
-
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="users-profile.html">
-            <i class="bi bi-person-fill"></i>
-            <span>Profile</span>
-          </a>
-        </li>
-        <!-- End Profile Page Nav -->
-
-        <li class="nav-item">
-          <a class="nav-link collapsed" data-bs-toggle="modal" data-bs-target="#logoutModal">
-            <i class="bi bi-box-arrow-right"></i>
-            <span>Log Out</span>
-          </a>
-        </li>
-        <!-- End Contact Page Nav -->
-      </ul>
+      <?php include ("sidebar.php") ?>
     </aside>
-    <!-- End Sidebar-->
 
     <!-- Small modal -->
     <div class="container">
@@ -324,7 +230,7 @@
                             </div>
                             <div class="modal-footer d-flex justify-content-center">
                                 <button type="submit" class="btn btn-primary">Kirim</button>
-                                <a href="datauser.html"><button class="btn btn-secondary">Tutup</button></a>
+                                <a href="datauser.php"><button class="btn btn-secondary">Tutup</button></a>
                             </div>                   
                           </div>
                         </div>

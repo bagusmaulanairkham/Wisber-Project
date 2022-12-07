@@ -4,9 +4,11 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Dashboard - NiceAdmin Bootstrap Template</title>
+    <title>Validasi - WISBER Bootstrap Template</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <!-- Favicons -->
     <link href="assets/img/logonavbar.png" rel="icon" />
@@ -58,7 +60,7 @@
       <!-- End Logo -->
 
       <nav class="header-nav ms-auto">
-        <ul class="d-flex align-items-center">    
+        <ul class="d-flex align-items-center">
           <li class="nav-item dropdown pe-3">
             <a
               class="nav-link nav-profile d-flex align-items-center pe-0"
@@ -84,103 +86,9 @@
     </header>
     <!-- End Header -->
 
-    <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
-      <ul class="sidebar-nav" id="sidebar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">
-            <i class="bi bi-house-door-fill"></i>
-            <span>Dashboard</span>
-          </a>
-        </li>
-        <!-- End Dashboard Nav -->
-
-        <li class="nav-item">
-          <a
-            class="nav-link collapsed"
-            data-bs-target="#components-nav"
-            data-bs-toggle="collapse"
-            href="#"
-          >
-            <i class="bi bi-table"></i><span>Wisata</span
-            ><i class="bi bi-chevron-down ms-auto"></i>
-          </a>
-          <ul
-            id="components-nav"
-            class="nav-content collapse"
-            data-bs-parent="#sidebar-nav"
-          >
-            <li>
-              <a href="validasi.html">
-                <i class="bi bi-circle"></i><span>Validasi</span>
-              </a>
-            </li>
-            <li>
-              <a href="list_data.html">
-                <i class="bi bi-circle"></i><span>List Data</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <!-- End Components Nav -->
-
-        <li class="nav-item">
-          <a
-            class="nav-link collapsed"
-            data-bs-target="#forms-nav"
-            data-bs-toggle="collapse"
-            href="#"
-          >
-            <i class="bi bi-send-exclamation"></i><span>Pengaduan</span
-            ><i class="bi bi-chevron-down ms-auto"></i>
-          </a>
-          <ul
-            id="forms-nav"
-            class="nav-content collapse"
-            data-bs-parent="#sidebar-nav"
-          >
-            <li>
-              <a href="forms-elements.html">
-                <i class="bi bi-circle"></i><span>List Pengaduan</span>
-              </a>
-            </li>
-            <li>
-              <a href="forms-layouts.html">
-                <i class="bi bi-circle"></i><span>Feedback</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <!-- End Forms Nav -->
-
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="datauser.html">
-            <i class="bi bi-people-fill"></i>
-            <span>Data User</span>
-          </a>
-        </li>
-        <!-- End Tables Nav -->
-
-        <li class="nav-heading">Pages</li>
-
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="users-profile.html">
-            <i class="bi bi-person-fill"></i>
-            <span>Profile</span>
-          </a>
-        </li>
-        <!-- End Profile Page Nav -->
-
-        <li class="nav-item">
-          <a class="nav-link collapsed" data-bs-toggle="modal" data-bs-target="#logoutModal">
-            <i class="bi bi-box-arrow-right"></i>
-            <span>Log Out</span>
-          </a>
-        </li>
-        <!-- End Contact Page Nav -->
-      </ul>
+      <?php include ("sidebar.php") ?>
     </aside>
-    <!-- End Sidebar-->
 
     <!-- Small modal -->
     <div class="container">
@@ -207,12 +115,12 @@
 
     <main id="main" class="main">
       <div class="pagetitle">
-        <h1>List Data</h1>
+        <h1>Validasi</h1>
         <nav>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
             <li class="breadcrumb-item">Wisata</li>
-            <li class="breadcrumb-item active">List Data</li>
+            <li class="breadcrumb-item active">Validasi</li>
           </ol>
         </nav>
       </div>
@@ -221,34 +129,56 @@
       <section class="section dashboard">
         <div class="card recent-sales overflow-auto">
           <div class="card-body">
-            <h5 class="card-title">Data Potensi Wisata</h5>
+            <h5 class="card-title">Data Request</h5>
 
             <table class="table table-striped table-bordered datatable">
               <thead>
                 <tr>
-                  <th scope="col">Desa</th>
-                  <th scope="col">Nama Wisata</th>
-                  <th scope="col">Alamat</th>
-                  <th scope="col">Status</th>
-                  <th scope="col">review</th>
+                  <th scope="col" class="text-center">Desa</th>
+                  <th scope="col" class="text-center">Email</th>
+                  <th scope="col" class="text-center">Tanggal</th>
+                  <th scope="col" class="text-center">Aksi</th>
+                  <th scope="col" class="text-center">review</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row"><a href="#">Kaliwining</a></th>
-                  <td>Brandon Jacob</td>
-                  <td>
-                    <p>Jln Sumatra</p>
-                  </td>
-                  <td>Disetujui</td>
-                  <td>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-eye"></i></a>
+                  <td class="text-center">Pancakarya</th>
+                  <td class="text-center">desaancakarya@gmail.com</td>
+                  <td class="text-center">22 November 2022</td>
+                  <td class="text-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Validasi
+                    </button>
+
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade text-center" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Data</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Validasi Status Wisata</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Pilih status  validasi data potensi wisata</p>
+                          </div>
+                          <div class="modal-footer d-flex justify-content-center">                           
+                            <button type="button" class="btn btn-success " >Disetujui</button>
+                            <button type="button" class="btn btn-danger">Ditolak</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="bi bi-eye"></i></a>
+                    <!-- Modal -->
+                    <div class="modal fade text-center" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5 bold" id="exampleModalLabel">Detail Data</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
@@ -309,6 +239,7 @@
                                 <p>keterangan</p>
                               </div>
                             </div>
+
                           </div>                    
                         </div>
                       </div>
@@ -355,6 +286,8 @@
     <script src="assets/vendor/tinymce/tinymce.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
 
+    <!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
   </body>

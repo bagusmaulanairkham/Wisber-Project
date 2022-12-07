@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Data User-WISBER</title>
+    <title>Dashboard - WISBER Bootstrap Template</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
     <!--Bootstraps-->
@@ -61,6 +61,12 @@
 
       <nav class="header-nav ms-auto">
         <ul class="d-flex align-items-center">
+          <li class="nav-item d-block d-lg-none">
+            <a class="nav-link nav-icon search-bar-toggle" href="#">
+              <i class="bi bi-search"></i>
+            </a>
+          </li>
+          <!-- End Search Icon-->
 
           <li class="nav-item dropdown pe-3">
             <a
@@ -77,108 +83,76 @@
                 Admin</span
               > </a
             ><!-- End Profile Iamge Icon -->
+
+            <ul
+              class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile"
+            >
+              <li class="dropdown-header">
+                <h6>Kevin Anderson</h6>
+                <span>Web Designer</span>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+
+              <li>
+                <a
+                  class="dropdown-item d-flex align-items-center"
+                  href="users-profile.html"
+                >
+                  <i class="bi bi-person"></i>
+                  <span>My Profile</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+
+              <li>
+                <a
+                  class="dropdown-item d-flex align-items-center"
+                  href="users-profile.html"
+                >
+                  <i class="bi bi-gear"></i>
+                  <span>Account Settings</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+
+              <li>
+                <a
+                  class="dropdown-item d-flex align-items-center"
+                  href="pages-faq.html"
+                >
+                  <i class="bi bi-question-circle"></i>
+                  <span>Need Help?</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <i class="bi bi-box-arrow-right"></i>
+                  <span>Sign Out</span>
+                </a>
+              </li>
+            </ul>
+            <!-- End Profile Dropdown Items -->
+          </li>
+          <!-- End Profile Nav -->
+        </ul>
       </nav>
       <!-- End Icons Navigation -->
     </header>
     <!-- End Header -->
 
-    <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
-      <ul class="sidebar-nav" id="sidebar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">
-            <i class="bi bi-house-door-fill"></i>
-            <span>Dashboard</span>
-          </a>
-        </li>
-        <!-- End Dashboard Nav -->
-
-        <li class="nav-item">
-          <a
-            class="nav-link collapsed"
-            data-bs-target="#components-nav"
-            data-bs-toggle="collapse"
-            href="#"
-          >
-            <i class="bi bi-table"></i><span>Wisata</span
-            ><i class="bi bi-chevron-down ms-auto"></i>
-          </a>
-          <ul
-            id="components-nav"
-            class="nav-content collapse"
-            data-bs-parent="#sidebar-nav"
-          >
-            <li>
-              <a href="validasi.html">
-                <i class="bi bi-circle"></i><span>Validasi</span>
-              </a>
-            </li>
-            <li>
-              <a href="list_data.html">
-                <i class="bi bi-circle"></i><span>List Data</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <!-- End Components Nav -->
-
-        <li class="nav-item">
-          <a
-            class="nav-link collapsed"
-            data-bs-target="#forms-nav"
-            data-bs-toggle="collapse"
-            href="#"
-          >
-            <i class="bi bi-send-exclamation"></i><span>Pengaduan</span
-            ><i class="bi bi-chevron-down ms-auto"></i>
-          </a>
-          <ul
-            id="forms-nav"
-            class="nav-content collapse"
-            data-bs-parent="#sidebar-nav"
-          >
-            <li>
-              <a href="forms-elements.html">
-                <i class="bi bi-circle"></i><span>List Pengaduan</span>
-              </a>
-            </li>
-            <li>
-              <a href="forms-layouts.html">
-                <i class="bi bi-circle"></i><span>Feedback</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <!-- End Forms Nav -->
-
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="datauser.html">
-            <i class="bi bi-people-fill"></i>
-            <span>Data User</span>
-          </a>
-        </li>
-        <!-- End Tables Nav -->
-
-        <li class="nav-heading">Pages</li>
-
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="users-profile.html">
-            <i class="bi bi-person-fill"></i>
-            <span>Profile</span>
-          </a>
-        </li>
-        <!-- End Profile Page Nav -->
-
-        <li class="nav-item">
-          <a class="nav-link collapsed" data-bs-toggle="modal" data-bs-target="#logoutModal">
-            <i class="bi bi-box-arrow-right"></i>
-            <span>Log Out</span>
-          </a>
-        </li>
-        <!-- End Contact Page Nav -->
-      </ul>
+      <?php include ("sidebar.php") ?>
     </aside>
-    <!-- End Sidebar-->
 
     <!-- Small modal -->
     <div class="container">
@@ -205,57 +179,18 @@
 
     <main id="main" class="main">
       <div class="pagetitle">
-        <h1>Tambah User</h1>
+        <h1>Profil</h1>
         <nav>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active"><a href="datauser.html">Kelola User</a></li>
-            <li class="breadcrumb-item active">Tambah User</li>
+            <li class="breadcrumb-item active">Profil</li>
           </ol>
         </nav>
       </div>
       <!-- End Page Title -->
 
       <section class="section dashboard">
-        <div class="card recent-sales overflow-auto">
-            <div class="card-body">
-              <h5 class="card-title">Form Tambah User</h5>
-              <form>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Nama Desa</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Alamat</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">                                        
-                  </div>
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">                                      
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="Password">
-                  <i class="bi bi-eye" id="Password" style="margin-left: -30px; cursor: pointer;"></i>
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Konfirmasi Password</label>
-                  <input type="password" class="form-control" id="KonfirmasiPassword">
-                  <i class="bi bi-eye" id="KonfirmasiPassword" style="margin-left: -30px; cursor: pointer;"></i>
-                </div>
-                <div class="mb-3">
-                    <label for="formFile" class="form-label">Foto Profil</label>
-                    <input class="form-control" type="file" id="formFile">                                   
-                </div>
-                                                  
-              </form>
-            </div>
-            <div class="card-footer d-flex justify-content-center">
-              <a href="datauser.html" class="m-2"><button type="button" class="btn btn-danger">Tutup</button></a>
-              <button type="submit" class="btn btn-success m-2">Tambah</button>
-            </div>
-          </div>
+        
       </section>
     </main>
     <!-- End #main -->
