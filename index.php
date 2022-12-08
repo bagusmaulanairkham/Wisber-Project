@@ -60,53 +60,6 @@
             <span class="d-none d-md-block ps-2">
               Admin</span> </a><!-- End Profile Iamge Icon -->
 
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li class="dropdown-header">
-              <h6>Kevin Anderson</h6>
-              <span>Web Designer</span>
-            </li>
-            <li>
-              <hr class="dropdown-divider" />
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-person"></i>
-                <span>My Profile</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider" />
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-gear"></i>
-                <span>Account Settings</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider" />
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                <i class="bi bi-question-circle"></i>
-                <span>Need Help?</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider" />
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
-                <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
-              </a>
-            </li>
-          </ul>
-          <!-- End Profile Dropdown Items -->
         </li>
         <!-- End Profile Nav -->
       </ul>
@@ -147,7 +100,7 @@
       <h1>Dashboard</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="index.php">Home</a></li>
           <li class="breadcrumb-item active">Dashboard</li>
         </ol>
       </nav>
@@ -208,23 +161,23 @@
           </div>
         </div>
 
-        <div class="col-6 col-md-4">
+        <div class="col col-md-4">
           <div class="card recent-sales overflow-auto">
-            <div class="filter">
-              <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                <li class="dropdown-header text-start">
-                  <h6>Filter</h6>
-                </li>
+            <div class="card-body ">
+              <h5 class="card-title">Notifikasi </h5>
+              <div class="news overflowAuto">
+                <div class="post-item clearfix">
+                  <img src="assets/img/news-1.jpg" class="rounded-circle" alt="LogoDesa">
+                  <h4><a href="#">Wisata</a></h4>
+                  <p>permintaan validasi wisata dari <span>Desa Gumukmas</span></p>
+                </div>
+                <div class="post-item clearfix">
+                  <img src="assets/img/news-1.jpg" class="rounded-circle" alt="LogoDesa">
+                  <h4><a href="#">Pengaduan</a></h4>
+                  <p>Pengaduan dari <span>Desa Gumukmas</span></p>
+                </div>
 
-                <li><a class="dropdown-item" href="#">Today</a></li>
-                <li><a class="dropdown-item" href="#">This Month</a></li>
-                <li><a class="dropdown-item" href="#">This Year</a></li>
-              </ul>
-            </div>
-
-            <div class="card-body">
-              <h5 class="card-title">Notifikasi <span>| Today</span></h5>
+              </div><!-- End sidebar recent posts-->
             </div>
           </div>
         </div>
@@ -240,10 +193,8 @@
                 <li class="dropdown-header text-start">
                   <h6>Filter</h6>
                 </li>
-
-                <li><a class="dropdown-item" href="#">Today</a></li>
-                <li><a class="dropdown-item" href="#">This Month</a></li>
-                <li><a class="dropdown-item" href="#">This Year</a></li>
+                <li><a class="dropdown-item" href="#">Tahun Kemarin</a></li>
+                <li><a class="dropdown-item" href="#">Tahun Ini</a></li>
               </ul>
             </div>
 
@@ -310,10 +261,8 @@
                 <li class="dropdown-header text-start">
                   <h6>Filter</h6>
                 </li>
-
-                <li><a class="dropdown-item" href="#">Today</a></li>
-                <li><a class="dropdown-item" href="#">This Month</a></li>
-                <li><a class="dropdown-item" href="#">This Year</a></li>
+                <li><a class="dropdown-item" href="#">Tahun Kemarin</a></li>
+                <li><a class="dropdown-item" href="#">Tahun Ini</a></li>
               </ul>
             </div>
 
@@ -330,7 +279,7 @@
                       data: [31, 40, 28, 51, 42, 82],
                     }, ],
                     chart: {
-                      height:200,
+                      height: 200,
                       type: "area",
                       toolbar: {
                         show: false,
@@ -380,10 +329,8 @@
                 <li class="dropdown-header text-start">
                   <h6>Filter</h6>
                 </li>
-
-                <li><a class="dropdown-item" href="#">Today</a></li>
-                <li><a class="dropdown-item" href="#">This Month</a></li>
-                <li><a class="dropdown-item" href="#">This Year</a></li>
+                <li><a class="dropdown-item" href="#">Tahun Kemarin</a></li>
+                <li><a class="dropdown-item" href="#">Tahun Ini</a></li>
               </ul>
             </div>
 
@@ -443,7 +390,7 @@
         </div>
       </div>
 
-  
+
     </section>
   </main>
   <!-- End #main -->

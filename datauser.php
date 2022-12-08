@@ -114,7 +114,7 @@
         <h1>Kelola User</h1>
         <nav>
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
             <li class="breadcrumb-item active">Kelola User</li>
           </ol>
         </nav>
@@ -126,7 +126,7 @@
             <div class="card-body">
               <h5 class="card-title">Data User</h5>
 
-              <button type="button" class="btn btn-light position-absolute top-0 end-0 m-3"><a class="" href="formuser.html"><i class="bi bi-person-fill"></i><span>Tambah User</span></a> </button>              
+              <button type="button" class="btn btn-light position-absolute top-0 end-0 m-3"><a class="" href="formuser.php"><i class="bi bi-person-fill"></i><span>Tambah User</span></a> </button>              
   
               <table class="table table-striped table-bordered datatable">
                 <thead>
@@ -140,10 +140,10 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row" class="text-center"><a href="#">Kaliwining</a></th>
-                    <td class="text-center">Brandon Jacob</td>
-                    <td class="text-center">Jln Sumatra</td>
-                    <td class="text-center">Disetujui</td>
+                    <th scope="row" class="text-center"><a href="#">1</a></th>
+                    <td class="text-center">Desa Umbulsari</td>
+                    <td class="text-center">DesaUmbulsari@gmail.co.id</td>
+                    <td class="text-center">Jalan Ahmad Yani</td>
                     <td class="text-center">                
                       <a href="#" class="p-2"data-bs-toggle="modal" data-bs-target="#DataDetailUser"><i class="bi bi-pencil-square"></i></a>                                            
                     </td>
@@ -160,14 +160,14 @@
                               <div class="row">
                                 <div class="col">
                                   <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label"><strong>ID User</strong></label>
-                                    <input type="email" class="form-control" id="id_user">
+                                    <label for="exampleFormControlInput1" class="form-label"><strong>ID User</strong></label>                                    
+                                    <p class="border border-secondary rounded">1</p>
                                   </div>
                                 </div>
                                 <div class="col">
                                   <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label"><strong>Nama Desa</strong></label>
-                                    <input type="email" class="form-control" id="nama_desa">
+                                    <p class="border border-secondary rounded">Desa Umbulsari</p>
                                   </div>
                                 </div>
                               </div>
@@ -175,13 +175,13 @@
                                 <div class="col">
                                   <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label"><strong>Email</strong></label>
-                                    <input type="email" class="form-control" id="email">
+                                    <p class="border border-secondary rounded">DesaUmbulsari@gmail.co.id</p>
                                   </div>
                                 </div>
                                 <div class="col">
                                   <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label"><strong>Alamat</strong></label>
-                                    <input type="email" class="form-control" id="alamat">
+                                    <p class="border border-secondary rounded">Jalan Ahmad Yani</p>
                                   </div>
                                 </div>
                               </div>                                                          

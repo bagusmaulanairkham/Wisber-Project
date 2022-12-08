@@ -118,7 +118,7 @@
         <h1>Validasi</h1>
         <nav>
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
             <li class="breadcrumb-item">Wisata</li>
             <li class="breadcrumb-item active">Validasi</li>
           </ol>
@@ -172,9 +172,10 @@
                     </div>
                   </td>
                   <td class="text-center">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="bi bi-eye"></i></a>
-                    <!-- Modal -->
-                    <div class="modal fade text-center" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="bi bi-eye"></i></a>                    
+                  </td>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -185,14 +186,14 @@
                             <div class="row">
                               <div class="col">
                                 <div class="mb-3">
-                                  <label for="exampleFormControlInput1" class="form-label"><strong>ID User</strong></label>
-                                  <input type="email" class="form-control" id="id_user">
+                                  <label for="exampleFormControlInput1" class="form-label"><strong>ID User</strong></label>                                
+                                  <p>1</p>
                                 </div>
                               </div>
                               <div class="col">
                                 <div class="mb-3">
                                   <label for="exampleFormControlInput1" class="form-label"><strong>Nama Wisata</strong></label>
-                                  <input type="email" class="form-control" id="nama_wisata">
+                                  <p>Wisata Bunga</p>
                                 </div>
                               </div>
                             </div>
@@ -200,13 +201,13 @@
                               <div class="col">
                                 <div class="mb-3">
                                   <label for="exampleFormControlInput1" class="form-label"><strong>Alamat</strong></label>
-                                  <input type="email" class="form-control" id="alamat">
+                                  <p>Jl.Semeru No.117</p>
                                 </div>
                               </div>
                               <div class="col">
                                 <div class="mb-3">
                                   <label for="exampleFormControlInput1" class="form-label"><strong>Kategori</strong></label>
-                                  <input type="email" class="form-control" id="kategori">
+                                  <p>Pemandangan</p>
                                 </div>
                               </div>
                             </div>
@@ -214,37 +215,56 @@
                               <div class="col">
                                 <div class="mb-3">
                                   <label for="exampleFormControlInput1" class="form-label"><strong>Luas</strong></label>
-                                  <input type="email" class="form-control" id="luas">
+                                  <p>1000 hektare</p>
                                 </div>
                               </div>
                               <div class="col">
                                 <div class="mb-3">
                                   <label for="exampleFormControlInput1" class="form-label"><strong>Penanggung Jawab</strong></label>
-                                  <input type="email" class="form-control" id="penanggung_jawab">
+                                  <p>Agus Samsudin</p>
                                 </div>
                               </div>
                             </div>
-                            <p class="d-flex justify-content-center"><strong>Fasilitas</strong></p>
-                            <div class="row ">
+                            <p class="fs-6"><strong>Weekday</strong></p>
+                            <div class="row">
                               <div class="col">
-                                <img src="" alt="">
-                                <p>keterangan</p>
+                                <div class="mb-3">
+                                  <label for="exampleFormControlInput1" class="form-label fw-semibold">Dewasa :</label>
+                                  <p>Rp30.000</p>
+                                </div>
                               </div>
                               <div class="col">
-                                <img src="" alt="">
-                                <p>keterangan</p>
-                              </div>
-                              <div class="col">
-                                <img src="" alt="">
-                                <p>keterangan</p>
+                                <div class="mb-3">
+                                  <label for="exampleFormControlInput1" class="form-label fw-semibold">Anak-Anak :</label>
+                                  <p>Rp20.000</p>
+                                </div>
                               </div>
                             </div>
-
+                            <p class="fs-6"><strong>Weekend</strong></p>
+                            <div class="row">
+                              <div class="col">
+                                <div class="mb-3">
+                                  <label for="exampleFormControlInput1" class="form-label fw-semibold">Dewasa :</label>
+                                  <p>Rp40.000</p>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="mb-3">
+                                  <label for="exampleFormControlInput1" class="form-label fw-semibold">Anak-Anak :</label>
+                                  <p>Rp30.000</p>
+                                </div>
+                              </div>
+                            </div>
+                            <p ><strong>Fasilitas</strong></p>
+                            <div class="row">
+                              <div class="col">
+                                <img src="assets/img/logonavbar.png" alt="">
+                              </div>
+                            </div>
                           </div>                    
                         </div>
                       </div>
                     </div>
-                  </td>
                 </tr>
               </tbody>
             </table>

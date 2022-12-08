@@ -101,7 +101,7 @@
       <h1>List Pengaduan</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="index.php">Home</a></li>
           <li class="breadcrumb-item">Pengaduan</li>
           <li class="breadcrumb-item active">List Pengaduan</li>
         </ol>
@@ -117,19 +117,19 @@
           <table class="table table-striped table-bordered datatable">
             <thead>
               <tr>
-                <th scope="col" class="text-center">Waktu</th>
+                <th scope="col" class="text-center">Tanggal</th>
                 <th scope="col" class="text-center">User</th>
                 <th scope="col" class="text-center">Isi Pengaduan</th>
-                <th scope="col" class="text-center">Feedback</th>
+                <th scope="col" class="text-center">Aksi</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="text-center">Pancakarya</th>
-                <td class="text-center">desaancakarya@gmail.com</td>
-                <td class="text-center">22 November 2022</td>
+                <td class="text-center">22 November 2022</th>
+                <td class="text-center">Desa Dukuhmencek</td>
+                <td class="text-center">Lorem ipsum dolor sit amet consectetur...</td>
                 <td class="text-center">
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="bi bi-chat-square-text"></i></a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="bi bi-eye"></i></a>
 
                 </td>
                 <!-- Modal -->
@@ -137,29 +137,67 @@
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h1 class="modal-title fs-5 bold" id="exampleModalLabel">Form Status dan Feedback</h1>
+                        <h1 class="modal-title fs-5 bold" id="exampleModalLabel">Detail Data Pengaduan</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
-                      <div class="modal-body">
+                      <div class="modal-body">                        
+                        <div class="row">
+                          <div class="col">
+                            <div class="mb-3">
+                              <label for="exampleFormControlInput1" class="form-label"><strong>Tanggal</strong></label>
+                              <p>22 November 2022</p>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="mb-3">
+                              <label for="exampleFormControlInput1" class="form-label"><strong>User</strong></label>
+                              <p>Desa Dukumencek</p>
+                            </div>
+                          </div>
+                        </div>                        
                         <div class="mb-3">
-                          <label for="exampleFormControlTextarea1" class="form-label">Isi Feedback</label>
-                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                          <label for="exampleFormControlTextarea" class="form-label"><strong>Isi Pengaduan</strong></label>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quam laborum,
+                             eius excepturi eveniet dolorum quidem repellendus, impedit aliquid minima ea consequatur? Quod dolores ratione repellat mollitia veritatis quisquam praesentium.</p>
                         </div>
-                      </div>
-                      <div class="modal-footer">
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">Diproses</label>
+                        <div class="mb-3">
+                          <label for="buktiPengaduan" class="form-label"><strong>Bukti Pengaduan</strong></label>
+                          <div class="row">
+                            <img src="assets/img/logonav.png" id="buktiPengaduan">
+                          </div>                              
                         </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">Ditolak</label>
+                        <div class="mb-3">
+                          <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            Tambah feedback dan status
+                          </a>
                         </div>
-                        <button type="submit" class="btn btn-primary m-2">Kirim</button>
+                        <div class="mb-3">
+                          <div class="collapse" id="collapseExample">
+                            <div class="mb-3">
+                              <label for="exampleFormControlTextarea1" class="form-label">Isi Feedback</label>
+                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                            <div class="mb-3">
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Diproses</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Ditolak</label>
+                              </div>
+                            </div>
+                            <div class="mb-3">
+                              <button type="submit" class="btn btn-primary m-2">Kirim</button>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+
+
               </tr>
             </tbody>
           </table>
