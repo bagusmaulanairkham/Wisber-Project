@@ -140,7 +140,7 @@
                         <h1 class="modal-title fs-5 bold" id="exampleModalLabel">Detail Data Pengaduan</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
-                      <div class="modal-body">                        
+                      <div class="modal-body">
                         <div class="row">
                           <div class="col">
                             <div class="mb-3">
@@ -154,42 +154,40 @@
                               <p>Desa Dukumencek</p>
                             </div>
                           </div>
-                        </div>                        
+                        </div>
                         <div class="mb-3">
                           <label for="exampleFormControlTextarea" class="form-label"><strong>Isi Pengaduan</strong></label>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quam laborum,
-                             eius excepturi eveniet dolorum quidem repellendus, impedit aliquid minima ea consequatur? Quod dolores ratione repellat mollitia veritatis quisquam praesentium.</p>
+                            eius excepturi eveniet dolorum quidem repellendus, impedit aliquid minima ea consequatur? Quod dolores ratione repellat mollitia veritatis quisquam praesentium.</p>
                         </div>
                         <div class="mb-3">
                           <label for="buktiPengaduan" class="form-label"><strong>Bukti Pengaduan</strong></label>
                           <div class="row">
                             <img src="assets/img/logonav.png" id="buktiPengaduan">
-                          </div>                              
+                          </div>
                         </div>
-                        <div class="mb-3">
+                        <p class="mb-3">
                           <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                             Tambah feedback dan status
                           </a>
-                        </div>
-                        <div class="mb-3">
-                          <div class="collapse" id="collapseExample">
-                            <div class="mb-3">
-                              <label for="exampleFormControlTextarea1" class="form-label">Isi Feedback</label>
-                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </p>
+                        <div class="collapse" id="collapseExample">
+                          <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Isi Feedback</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                          </div>
+                          <div class="mb-3">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                              <label class="form-check-label" for="inlineRadio1">Diproses</label>
                             </div>
-                            <div class="mb-3">
-                              <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                <label class="form-check-label" for="inlineRadio1">Diproses</label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                <label class="form-check-label" for="inlineRadio2">Ditolak</label>
-                              </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                              <label class="form-check-label" for="inlineRadio2">Ditolak</label>
                             </div>
-                            <div class="mb-3">
-                              <button type="submit" class="btn btn-primary m-2">Kirim</button>
-                            </div>
+                          </div>
+                          <div class="mb-3">
+                            <button type="submit" class="btn btn-primary m-2">Kirim</button>
                           </div>
                         </div>
                       </div>

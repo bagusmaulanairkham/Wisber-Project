@@ -14,17 +14,17 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #f6f9ff;
+  background: #dbdbdb;
   color: #444444;
 }
 
 a {
-  color: #CB795E;
+  color: #ff3c3c;
   text-decoration: none;
 }
 
 a:hover {
-  color: #F4C1AF;
+  color: #dcac00;
   text-decoration: none;
 }
 
@@ -71,7 +71,11 @@ h6 {
   font-size: 24px;
   margin-bottom: 0;
   font-weight: 600;
-  color: #74331E;
+  color: #000000;
+}
+.col img{
+  height: 100px;
+  margin-bottom:5px;
 }
 
 /*--------------------------------------------------------------
@@ -84,7 +88,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: #CB795E;
+  background: #FFC23C;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -98,7 +102,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #E89C84;
+  background: #FFC23C;
   color: #fff;
 }
 
@@ -252,7 +256,7 @@ h6 {
 .card-footer {
   border-color: #F4EEEB;
   background-color: #fff;
-  color: #6F5953;
+  color: #CF0A0A;
   padding: 15px;
 }
 
@@ -260,12 +264,12 @@ h6 {
   padding: 20px 0 15px 0;
   font-size: 18px;
   font-weight: 500;
-  color: #74331E;
+  color: #000000;
   font-family: "Poppins", sans-serif;
 }
 
 .card-title span {
-  color: #BC9386;
+  color: #FF7700;
   font-size: 14px;
   font-weight: 400;
 }
@@ -306,7 +310,7 @@ h6 {
 }
 
 .accordion-button:not(.collapsed) {
-  color: #74331E;
+  color: #000000;
   background-color: #f6f9ff;
 }
 
@@ -316,14 +320,15 @@ h6 {
   border: 0;
 }
 
+
 .accordion-flush .accordion-button:not(.collapsed) {
   box-shadow: none;
-  color: #CB795E;
+  color: #FFC23C;
 }
 
 .accordion-flush .accordion-body {
   padding: 0 0 15px 0;
-  color: #926F64;
+  color: #CF0A0A;
   font-size: 15px;
 }
 
@@ -331,25 +336,25 @@ h6 {
 .breadcrumb {
   font-size: 14px;
   font-family: "Poppins", sans-serif;
-  color: #BC9386;
+  color: #FF7700;
   font-weight: 600;
 }
 
 .breadcrumb a {
-  color: #BC9386;
+  color: #FF7700;
   transition: 0.3s;
 }
 
 .breadcrumb a:hover {
-  color: #AD8477;
+  color: #DC5F00;
 }
 
 .breadcrumb .breadcrumb-item::before {
-  color: #BC9386;
+  color: #FF7700;
 }
 
 .breadcrumb .active {
-  color: #AD8477;
+  color: #DC5F00;
   font-weight: 600;
 }
 
@@ -361,18 +366,18 @@ h6 {
 .nav-tabs-bordered .nav-link {
   margin-bottom: -2px;
   border: none;
-  color: #4B2012;
+  color: #000000;
 }
 
 .nav-tabs-bordered .nav-link:hover,
 .nav-tabs-bordered .nav-link:focus {
-  color: #CB795E;
+  color: #FFC23C;
 }
 
 .nav-tabs-bordered .nav-link.active {
   background-color: #fff;
-  color: #CB795E;
-  border-bottom: 2px solid #CB795E;
+  color: #FFC23C;
+  border-bottom: 2px solid #FFC23C;
 }
 
 /*--------------------------------------------------------------
@@ -398,7 +403,7 @@ h6 {
 .logo span {
   font-size: 26px;
   font-weight: 20;
-  color: #74331E;
+  color: #000000;
   font-family:"BenchNine";
 }
 
@@ -417,7 +422,7 @@ h6 {
   font-size: 32px;
   padding-left: 10px;
   cursor: pointer;
-  color: #74331E;
+  color: #000000;
 }
 
 .header .search-bar {
@@ -454,7 +459,7 @@ h6 {
 .header .search-form input {
   border: 0;
   font-size: 14px;
-  color: #74331E;
+  color: #000000;
   border: 1px solid rgba(1, 41, 112, 0.2);
   padding: 7px 38px 7px 8px;
   border-radius: 3px;
@@ -477,7 +482,7 @@ h6 {
 }
 
 .header .search-form button i {
-  color: #74331E;
+  color: #000000;
 }
 
 /*--------------------------------------------------------------
@@ -494,13 +499,13 @@ h6 {
 
 .header-nav .nav-icon {
   font-size: 22px;
-  color: #74331E;
+  color: #000000;
   margin-right: 25px;
   position: relative;
 }
 
 .header-nav .nav-profile {
-  color: #74331E;
+  color: #000000;
 }
 
 .header-nav .nav-profile img {
@@ -638,6 +643,12 @@ h6 {
   box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
   background-color: #fff;
 }
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
 
 @media (max-width: 1199px) {
   .sidebar {
@@ -700,7 +711,7 @@ h6 {
 .sidebar-nav .nav-heading {
   font-size: 11px;
   text-transform: uppercase;
-  color: #BC9386;
+  color: #FF7700;
   font-weight: 600;
   margin: 10px 0 5px 15px;
 }
@@ -710,7 +721,7 @@ h6 {
   align-items: center;
   font-size: 15px;
   font-weight: 600;
-  color: #CB795E;
+  color: #FFC23C;
   transition: 0.3;
   background: #f6f9ff;
   padding: 10px 15px;
@@ -720,25 +731,25 @@ h6 {
 .sidebar-nav .nav-link i {
   font-size: 16px;
   margin-right: 10px;
-  color: #CB795E;
+  color: #FFC23C;
 }
 
 .sidebar-nav .nav-link.collapsed {
-  color: #74331E;
+  color: #000000;
   background: #fff;
 }
 
 .sidebar-nav .nav-link.collapsed i {
-  color: #BC9386;
+  color: #FF7700;
 }
 
 .sidebar-nav .nav-link:hover {
-  color: #CB795E;
+  color: #FFC23C;
   background: #f6f9ff;
 }
 
 .sidebar-nav .nav-link:hover i {
-  color: #CB795E;
+  color: #FFC23C;
 }
 
 .sidebar-nav .nav-link .bi-chevron-down {
@@ -761,7 +772,7 @@ h6 {
   align-items: center;
   font-size: 14px;
   font-weight: 600;
-  color: #74331E;
+  color: #000000;
   transition: 0.3;
   padding: 10px 0 10px 40px;
   transition: 0.3s;
@@ -776,11 +787,11 @@ h6 {
 
 .sidebar-nav .nav-content a:hover,
 .sidebar-nav .nav-content a.active {
-  color: #CB795E;
+  color: #FFC23C;
 }
 
 .sidebar-nav .nav-content a.active i {
-  background-color: #CB795E;
+  background-color: #FFC23C;
 }
 
 /*--------------------------------------------------------------
@@ -804,7 +815,7 @@ h6 {
 
 .dashboard .filter .icon:hover,
 .dashboard .filter .icon:focus {
-  color: #CB795E;
+  color: #FFC23C;
 }
 
 .dashboard .filter .dropdown-header {
@@ -832,7 +843,7 @@ h6 {
 
 .dashboard .info-card h6 {
   font-size: 28px;
-  color: #74331E;
+  color: #000000;
   font-weight: 700;
   margin: 0;
   padding: 0;
@@ -848,7 +859,7 @@ h6 {
 }
 
 .dashboard .sales-card .card-icon {
-  color: #CB795E;
+  color: #FFC23C;
   background: #f6f6fe;
 }
 
@@ -858,7 +869,7 @@ h6 {
 }
 
 .dashboard .customers-card .card-icon {
-  color: #ff771d;
+  color: #CF0A0A;
   background: #ffecdf;
 }
 
@@ -928,12 +939,12 @@ h6 {
 }
 
 .dashboard .news h4 a {
-  color: #74331E;
+  color: #000000;
   transition: 0.3s;
 }
 
 .dashboard .news h4 a:hover {
-  color: #CB795E;
+  color: #FFC23C;
 }
 
 .dashboard .news p {
@@ -1000,7 +1011,7 @@ h6 {
   background-color: #fff;
   border-radius: 0.25rem;
   text-align: center;
-  color: #74331E;
+  color: #000000;
   padding: 15px 0;
 }
 
@@ -1021,6 +1032,11 @@ h6 {
   color: #666;
 }
 
+.bi i{
+  color: #000000;
+  size: 30px;
+}
+
 /*--------------------------------------------------------------
 # Profie Page
 --------------------------------------------------------------*/
@@ -1031,7 +1047,7 @@ h6 {
 .profile .profile-card h2 {
   font-size: 24px;
   font-weight: 700;
-  color: #4B2012;
+  color: #000000;
   margin: 10px 0 0 0;
 }
 
@@ -1049,7 +1065,7 @@ h6 {
 }
 
 .profile .profile-card .social-links a:hover {
-  color: #74331E;
+  color: #000000;
 }
 
 .profile .profile-overview .row {
@@ -1058,7 +1074,7 @@ h6 {
 }
 
 .profile .profile-overview .card-title {
-  color: #74331E;
+  color: #000000;
 }
 
 .profile .profile-overview .label {
@@ -1081,7 +1097,7 @@ h6 {
 .faq .basic h6 {
   font-size: 18px;
   font-weight: 600;
-  color: #CB795E;
+  color: #FFC23C;
 }
 
 .faq .basic p {
@@ -1098,12 +1114,12 @@ h6 {
 .contact .info-box i {
   font-size: 38px;
   line-height: 0;
-  color: #CB795E;
+  color: #FFC23C;
 }
 
 .contact .info-box h3 {
   font-size: 20px;
-  color: #74331E;
+  color: #000000;
   font-weight: 700;
   margin: 20px 0 10px 0;
 }
@@ -1166,7 +1182,7 @@ h6 {
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  border-color: #CB795E;
+  border-color: #FFC23C;
 }
 
 .contact .php-email-form input {
@@ -1178,7 +1194,7 @@ h6 {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #CB795E;
+  background: #FFC23C;
   border: 0;
   padding: 10px 30px;
   color: #fff;
@@ -1220,7 +1236,7 @@ h6 {
 .error-404 h1 {
   font-size: 180px;
   font-weight: 700;
-  color: #CB795E;
+  color: #FFC23C;
   margin-bottom: 0;
   line-height: 150px;
 }
@@ -1228,18 +1244,18 @@ h6 {
 .error-404 h2 {
   font-size: 24px;
   font-weight: 700;
-  color: #74331E;
+  color: #000000;
   margin-bottom: 30px;
 }
 
 .error-404 .btn {
-  background: #AD8477;
+  background: #DC5F00;
   color: #fff;
   padding: 8px 30px;
 }
 
 .error-404 .btn:hover {
-  background: #926F64;
+  background: #CF0A0A;
 }
 
 @media (min-width: 992px) {
@@ -1260,12 +1276,12 @@ h6 {
 
 .footer .copyright {
   text-align: center;
-  color: #74331E;
+  color: #000000;
 }
 
 .footer .credits {
   padding-top: 5px;
   text-align: center;
   font-size: 13px;
-  color: #74331E;
+  color: #000000;
 }
