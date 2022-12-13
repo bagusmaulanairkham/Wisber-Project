@@ -167,17 +167,17 @@
                         </p>
                         <div class="collapse" id="collapseExample">
                           <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Isi Feedback</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label for="feedback" class="form-label">Isi Feedback</label>
+                            <textarea class="form-control" id="feedback" rows="3"></textarea>
                           </div>
                           <div class="mb-3">
                             <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                              <label class="form-check-label" for="inlineRadio1">Diproses</label>
+                              <input class="form-check-input" type="radio" name="diproses" id="diproses" value="option1">
+                              <label class="form-check-label" for="diproses">Diproses</label>
                             </div>
                             <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                              <label class="form-check-label" for="inlineRadio2">Ditolak</label>
+                              <input class="form-check-input" type="radio" name="ditolak" id="ditolak" value="option2">
+                              <label class="form-check-label" for="ditolak">Ditolak</label>
                             </div>
                           </div>
                           <div class="mb-3">

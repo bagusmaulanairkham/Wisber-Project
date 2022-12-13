@@ -133,7 +133,7 @@ $hasil2 = mysqli_query($conn,$query2);
                 <th scope="col" class="text-center">Nama Wisata</th>
                 <th scope="col" class="text-center">Alamat</th>
                 <th scope="col" class="text-center">Status</th>
-                <th scope="col" class="text-center">review</th>
+                <th scope="col" class="text-center">Aksi</th>
               </tr>
             </thead>
             <tbody>
@@ -153,12 +153,32 @@ $hasil2 = mysqli_query($conn,$query2);
                 <td class="text-center">Disetujui</td>
                 <td class="text-center">
                   <a href="detaildata.php" ><i class="bi bi-eye"></i></a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#modalhapus" ><i class="bi bi-trash"></i></a>
                 </td>
               </tr>
               </tr>
               <?php } ?>
             </tbody>
           </table>
+          <!--Modal-->
+          <div class="modal" id="modalhapus" tabindex="-1" role="dialog" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">                    
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p><i class="fa fa-question-circle"></i> Apakah Anda yakin ingin menghapus data? <br /></p>
+                    <div class="actionsBtns d-flex justify-content-center">
+                      <form action="/logout" method="post">
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+                        <input type="submit" class="btn btn-default btn-primary" data-dismiss="modal" value="Hapus" />
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
     </section>

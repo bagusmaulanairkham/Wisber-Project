@@ -103,7 +103,7 @@
                 <th scope="col" class="text-center">User</th>
                 <th scope="col" class="text-center">Isi Pengaduan</th>
                 <th scope="col" class="text-center">Status</th>
-                <th scope="col" class="text-center">Feedback</th>
+                <th scope="col" class="text-center">Aksi</th>
               </tr>
             </thead>
             <tbody>
@@ -129,25 +129,25 @@
                           <div class="col">
                             <div class="mb-3">
                               <label for="exampleFormControlInput1" class="form-label"><strong>Tanggal</strong></label>
-                              <p>22 November 2022</p>
+                              <p name="tanggal">22 November 2022</p>
                             </div>
                           </div>
                           <div class="col">
                             <div class="mb-3">
                               <label for="exampleFormControlInput1" class="form-label"><strong>User</strong></label>
-                              <p>Desa Pancakarya</p>
+                              <p name="nama_desa">Desa Pancakarya</p>
                             </div>
                           </div>
                           <div class="col">
                             <div class="mb-3">
                               <label for="exampleFormControlInput1" class="form-label"><strong>Wisata</strong></label>
-                              <p>22 November 2022</p>
+                              <p name="nama_wisata">22 November 2022</p>
                             </div>
                           </div>
                           <div class="col">
                             <div class="mb-3">
                               <label for="exampleFormControlInput1" class="form-label"><strong>Alamat</strong></label>
-                              <p>22 November 2022</p>
+                              <p name="alamat">22 November 2022</p>
                             </div>
                           </div>
                         </div>
@@ -178,14 +178,13 @@
             <div class="modal" id="modalhapus" tabindex="-1" role="dialog" aria-hidden="true">
               <div class="modal-dialog modal-sm">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Log Out</h1>
+                  <div class="modal-header">                    
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <p><i class="fa fa-question-circle"></i>Apakah Anda yakin ingin menghapus data? <br /></p>
+                    <p><i class="fa fa-question-circle"></i> Apakah Anda yakin ingin menghapus data? <br /></p>
                     <div class="actionsBtns d-flex justify-content-center">
-                      <form action="/logout" method="post">
+                      <form action="/delete" method="post">
                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                         <input type="submit" class="btn btn-default btn-primary" data-dismiss="modal" value="Hapus" />
                       </form>
