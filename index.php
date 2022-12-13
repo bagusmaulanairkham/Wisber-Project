@@ -94,55 +94,68 @@
         <div class="col-md-8">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Kunjungan Wisatawan di Kota Jember</h5>
-
+              <h5 class="card-title">Jumlah Wisata Berdasarkan Kategori di Kota Jember</h5>
               <!-- Line Chart -->
-              <div id="kunjunganChart"></div>
+              <div id="trafficChart" style="min-height: 350px;" class="echart"></div>
 
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
-                  new ApexCharts(document.querySelector("#kunjunganChart"), {
+                  echarts.init(document.querySelector("#trafficChart")).setOption({
+                    tooltip: {
+                      trigger: 'item'
+                    },
+                    legend: {
+                      top: '5%',
+                      left: 'center'
+                    },
                     series: [{
-                      name: "Wisatawan",
-                      data: [10, 41, 35, 51, 49, 62],
-                    }, ],
-                    chart: {
-                      height: 350,
-                      type: "line",
-                      zoom: {
-                        enabled: false,
+                      name: 'Access From',
+                      type: 'pie',
+                      radius: ['40%', '70%'],
+                      avoidLabelOverlap: false,
+                      label: {
+                        show: false,
+                        position: 'center'
                       },
-                    },
-                    dataLabels: {
-                      enabled: false,
-                    },
-                    stroke: {
-                      curve: "straight",
-                    },
-                    grid: {
-                      row: {
-                        colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
-                        opacity: 0.5,
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: '18',
+                          fontWeight: 'bold'
+                        }
                       },
-                    },
-                    xaxis: {
-                      categories: [
-                        "2017",
-                        "2018",
-                        "2019",
-                        "2020",
-                        "2021",
-                        "2022",
-                      ],
-                    },
-                  }).render();
+                      labelLine: {
+                        show: false
+                      },
+                      data: [{
+                          value: 1048,
+                          name: 'Search Engine'
+                        },
+                        {
+                          value: 735,
+                          name: 'Direct'
+                        },
+                        {
+                          value: 580,
+                          name: 'Email'
+                        },
+                        {
+                          value: 484,
+                          name: 'Union Ads'
+                        },
+                        {
+                          value: 300,
+                          name: 'Video Ads'
+                        }
+                      ]
+                    }]
+                  });
                 });
               </script>
               <!-- End Line Chart -->
             </div>
           </div>
         </div>
-
         <div class="col col-md-4">
           <div class="card recent-sales overflow-auto">
             <div class="card-body ">
@@ -181,60 +194,22 @@
             </div>
 
             <div class="card-body">
-              <h5 class="card-title">Wisata</h5>
-              <!-- Line Chart -->
-              <div id="reportsChart2"></div>
-              <script>
-                // Data
-                document.addEventListener("DOMContentLoaded", () => {
-                  new ApexCharts(document.querySelector("#reportsChart2"), {
-                    series: [{
-                      name: "Data Ajuan Potensi Wisata",
-                      data: [31, 40, 28, 51, 42, 82],
-                    }, ],
-                    chart: {
-                      height: 200,
-                      type: "area",
-                      toolbar: {
-                        show: false,
-                      },
-                    },
-                    markers: {
-                      size: 4,
-                    },
-                    colors: ["#4154f1", "#2eca6a", "#ff771d"],
-                    fill: {
-                      type: "gradient",
-                      gradient: {
-                        shadeIntensity: 1,
-                        opacityFrom: 0.3,
-                        opacityTo: 0.4,
-                        stops: [0, 90, 100],
-                      },
-                    },
-                    dataLabels: {
-                      enabled: false,
-                    },
-                    stroke: {
-                      curve: "smooth",
-                      width: 2,
-                    },
-                    xaxis: {
-                      type: "date",
-                      categories: ["Jun", "Jul", "Agu", "Sep", "Okt", "Nov"],
-                    },
-                    tooltip: {
-                      x: {
-                        format: "MM",
-                      },
-                    },
-                  }).render();
-                });
-              </script>
+              <h5 class="card-title">Customers <span>| This Year</span></h5>
+
+              <div class="d-flex align-items-center">
+                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                  <i class="bi bi-people"></i>
+                </div>
+                <div class="ps-3">
+                  <h6>1244</h6>
+                  <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
+
+                </div>
+              </div>
+
             </div>
           </div>
-        </div>
-
+        </div><!-- End Customers Card -->
         <div class="col col-md-4">
           <div class="card recent-sales overflow-auto">
             <div class="filter">
@@ -247,132 +222,51 @@
                 <li><a class="dropdown-item" href="#">Tahun Ini</a></li>
               </ul>
             </div>
-
             <div class="card-body">
-              <h5 class="card-title">Pengaduan</h5>
-              <!-- Line Chart -->
-              <div id="reportsChart3"></div>
-              <script>
-                // Data
-                document.addEventListener("DOMContentLoaded", () => {
-                  new ApexCharts(document.querySelector("#reportsChart3"), {
-                    series: [{
-                      name: "Data Pengaduan",
-                      data: [31, 40, 28, 51, 42, 82],
-                    }, ],
-                    chart: {
-                      height: 200,
-                      type: "area",
-                      toolbar: {
-                        show: false,
-                      },
-                    },
-                    markers: {
-                      size: 4,
-                    },
-                    colors: ["#4154f1", "#2eca6a", "#ff771d"],
-                    fill: {
-                      type: "gradient",
-                      gradient: {
-                        shadeIntensity: 1,
-                        opacityFrom: 0.3,
-                        opacityTo: 0.4,
-                        stops: [0, 90, 100],
-                      },
-                    },
-                    dataLabels: {
-                      enabled: false,
-                    },
-                    stroke: {
-                      curve: "smooth",
-                      width: 2,
-                    },
-                    xaxis: {
-                      type: "date",
-                      categories: ["Jun", "Jul", "Agu", "Sep", "Okt", "Nov"],
-                    },
-                    tooltip: {
-                      x: {
-                        format: "MM",
-                      },
-                    },
-                  }).render();
-                });
-              </script>
+              <h5 class="card-title">Customers <span>| This Year</span></h5>
+              <div class="d-flex align-items-center">
+                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                  <i class="bi bi-people"></i>
+                </div>
+                <div class="ps-3">
+                  <h6>1244</h6>
+                  <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="col col-md-4">
-          <div class="card recent-sales overflow-auto">
-            <div class="filter">
-              <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                <li class="dropdown-header text-start">
-                  <h6>Filter</h6>
-                </li>
-                <li><a class="dropdown-item" href="#">Tahun Kemarin</a></li>
-                <li><a class="dropdown-item" href="#">Tahun Ini</a></li>
-              </ul>
-            </div>
-
-            <div class="card-body">
-              <h5 class="card-title">Desa </h5>
-              <!-- Line Chart -->
-              <div id="reportsChart4"></div>
-              <script>
-                // Data
-                document.addEventListener("DOMContentLoaded", () => {
-                  new ApexCharts(document.querySelector("#reportsChart4"), {
-                    series: [{
-                      name: "Data Desa",
-                      data: [31, 40, 28, 51, 42, 82],
-                    }, ],
-                    chart: {
-                      height: 200,
-                      type: "area",
-                      toolbar: {
-                        show: false,
-                      },
-                    },
-                    markers: {
-                      size: 4,
-                    },
-                    colors: ["#4154f1", "#2eca6a", "#ff771d"],
-                    fill: {
-                      type: "gradient",
-                      gradient: {
-                        shadeIntensity: 1,
-                        opacityFrom: 0.3,
-                        opacityTo: 0.4,
-                        stops: [0, 90, 100],
-                      },
-                    },
-                    dataLabels: {
-                      enabled: false,
-                    },
-                    stroke: {
-                      curve: "smooth",
-                      width: 2,
-                    },
-                    xaxis: {
-                      type: "date",
-                      categories: ["Jun", "Jul", "Agu", "Sep", "Okt", "Nov"],
-                    },
-                    tooltip: {
-                      x: {
-                        format: "MM",
-                      },
-                    },
-                  }).render();
-                });
-              </script>
-            </div>
-          </div>
-        </div>
       </div>
+        <div class="col col-md-4">
+            <div class="card recent-sales overflow-auto">
+              <div class="filter">
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <li class="dropdown-header text-start">
+                    <h6>Filter</h6>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Tahun Kemarin</a></li>
+                  <li><a class="dropdown-item" href="#">Tahun Ini</a></li>
+                </ul>
+              </div>
 
+              <div class="card-body">
+                <h5 class="card-title">Customers <span>| This Year</span></h5>
 
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-people"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>1244</h6>
+                    <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div><!-- End Customers Card -->
+      </div>
     </section>
   </main>
   <!-- End #main -->

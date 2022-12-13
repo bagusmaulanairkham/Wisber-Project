@@ -88,25 +88,7 @@
 
     <!-- Small modal -->
     <div class="container">
-      <div class="modal" id="logoutModal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-sm">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Log Out</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p><i class="fa fa-question-circle"></i>Apakah Anda yakin ingin keluar? <br /></p>
-              <div class="actionsBtns d-flex justify-content-center">
-                  <form action="/logout" method="post">
-                      <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                      <input type="submit" class="btn btn-default btn-primary" data-dismiss="modal" value="Keluar" />                    
-                  </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <?php include("logout.php") ?>
     </div> 
 
     <main id="main" class="main">
@@ -187,7 +169,7 @@
                               </div>                                                          
                             </div>
                             <div class="modal-footer d-flex justify-content-center">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formEditUser">Ubah Data</button>
+                                <a href="ubahuser.php"><button type="button" class="btn btn-primary"> Ubah Data</button></a>
                             </div>
 
                           </div>
@@ -195,47 +177,6 @@
                       </div>
                       <!--end Modal-->
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="formEditUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h1 class="modal-title fs-5" id="exampleModalLabel">Form Ubah Data User</h1>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Nama Desa</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                        
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Alamat</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">                                        
-                                      </div>
-                                    <div class="mb-3">
-                                      <label for="exampleInputEmail1" class="form-label">Email</label>
-                                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">                                      
-                                    </div>
-                                    <div class="mb-3">
-                                      <label for="exampleInputPassword1" class="form-label">Password</label>
-                                      <input type="password" class="form-control" id="exampleInputPassword1">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="formFile" class="form-label">Foto Profil</label>
-                                        <input class="form-control" type="file" id="formFile">                                   
-                                    </div>
-                                                                      
-                                </form>
-                            </div>
-                            <div class="modal-footer d-flex justify-content-center">
-                                <button type="submit" class="btn btn-primary">Kirim</button>
-                                <a href="datauser.php"><button class="btn btn-secondary">Tutup</button></a>
-                            </div>                   
-                          </div>
-                        </div>
-                      </div>
-                      <!--end Modal-->
                   </tr>
                 </tbody>
               </table>

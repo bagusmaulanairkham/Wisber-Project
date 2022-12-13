@@ -5,10 +5,10 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <title>Validasi - WISBER Bootstrap Template</title>
+  <title>Data User-WISBER</title>
   <meta content="" name="description" />
   <meta content="" name="keywords" />
-  <!--Bootstrap-->
+  <!--Bootstraps-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
   <!-- Favicons -->
@@ -53,17 +53,12 @@
 
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
+
         <li class="nav-item dropdown pe-3">
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle" />
             <span class="d-none d-md-block ps-2">
-              Admin</span> </a>
-          <!-- End Profile Iamge Icon -->
-
-          <!-- End Profile Dropdown Items -->
-        </li>
-        <!-- End Profile Nav -->
-      </ul>
+              Admin</span> </a><!-- End Profile Iamge Icon -->
     </nav>
     <!-- End Icons Navigation -->
   </header>
@@ -80,12 +75,12 @@
 
   <main id="main" class="main">
     <div class="pagetitle">
-      <h1>Validasi</h1>
+      <h1>Tambah User</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item">Wisata</li>
-          <li class="breadcrumb-item active">Validasi</li>
+          <li class="breadcrumb-item active"><a href="datauser.php">Kelola User</a></li>
+          <li class="breadcrumb-item active">Ubah Data</li>
         </ol>
       </nav>
     </div>
@@ -94,54 +89,60 @@
     <section class="section dashboard">
       <div class="card recent-sales overflow-auto">
         <div class="card-body">
-          <h5 class="card-title">Data Request</h5>
+          <h5 class="card-title">Form Ubah Data User</h5>
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Nama Desa</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
-          <table class="table table-striped table-bordered datatable">
-            <thead>
-              <tr>
-                <th scope="col" class="text-center">Desa</th>
-                <th scope="col" class="text-center">Email</th>
-                <th scope="col" class="text-center">Tanggal</th>
-                <th scope="col" class="text-center">Aksi</th>
-                <th scope="col" class="text-center">review</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="text-center">Pancakarya</th>
-                <td class="text-center">desaancakarya@gmail.com</td>
-                <td class="text-center">22 November 2022</td>
-                <td class="text-center">
-                  <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Validasi
-                  </button>
-
-                  <!-- Modal -->
-                  <div class="modal fade text-center" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="exampleModalLabel">Validasi Status Wisata</h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          <p>Pilih status validasi data potensi wisata</p>
-                        </div>
-                        <div class="modal-footer d-flex justify-content-center">
-                          <button type="button" class="btn btn-success ">Disetujui</button>
-                          <button type="button" class="btn btn-danger">Ditolak</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td class="text-center">
-                  <a href="detaildata2.php"><i class="bi bi-eye "></i></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Alamat</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="Password">
+              <div class="input-group-addon">
+                <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Konfirmasi Password</label>
+              <input type="password" class="form-control" id="KonfirmasiPassword">
+              <div class="input-group-addon">
+                <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="formFile" class="form-label">Foto Profil</label>
+              <input class="form-control" type="file" id="formFile">
+            </div>
+            <script>
+              $(document).ready(function() {
+                $("#show_hide_password a").on('click', function(event) {
+                  event.preventDefault();
+                  if ($('#show_hide_password input').attr("type") == "text") {
+                    $('#show_hide_password input').attr('type', 'password');
+                    $('#show_hide_password i').addClass("fa-eye-slash");
+                    $('#show_hide_password i').removeClass("fa-eye");
+                  } else if ($('#show_hide_password input').attr("type") == "password") {
+                    $('#show_hide_password input').attr('type', 'text');
+                    $('#show_hide_password i').removeClass("fa-eye-slash");
+                    $('#show_hide_password i').addClass("fa-eye");
+                  }
+                });
+              });
+            </script>
+          </form>
+        </div>
+        <div class="card-footer d-flex justify-content-center">
+          <a href="datauser.php"><button type="button" class="btn btn-secondary m-2">Tutup</button></a>
+          <button type="submit" class="btn btn-primary m-2">Tambah</button>
         </div>
       </div>
     </section>
@@ -165,6 +166,9 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <!--Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -175,8 +179,6 @@
   <script src="assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!--Bootstrap-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 </body>
