@@ -1,3 +1,14 @@
+<?php
+
+include_once("koneksi.php");
+
+//ambil dari dari tabel user
+$query = "SELECT * FROM user";
+
+$hasil = mysqli_query ($conn, $query);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -116,68 +127,21 @@
                     <th scope="col" class="text-center">ID</th>
                     <th scope="col" class="text-center">Nama</th>
                     <th scope="col" class="text-center">Email</th>
-                    <th scope="col" class="text-center">Alamat</th>                    
                     <th scope="col" class="text-center">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
+                  <?php
+                  while ($data=mysqli_fetch_array($hasil)) { ?>
                   <tr>
-                    <th scope="row" class="text-center"><a href="#">1</a></th>
-                    <td class="text-center">Desa Umbulsari</td>
-                    <td class="text-center">DesaUmbulsari@gmail.co.id</td>
-                    <td class="text-center">Jalan Ahmad Yani</td>
+                    <th scope="row" class="text-center"><a href="#"><?php echo $data ["id"]; ?></a></th>
+                    <td class="text-center"><?php echo $data ["nama_desa"]; ?></td>
+                    <td class="text-center"><?php echo $data ["email"]; ?></td>
                     <td class="text-center">                
-                      <a href="#" class="p-2"data-bs-toggle="modal" data-bs-target="#DataDetailUser"><i class="bi bi-pencil-square"></i></a>                                            
+                      <a href="ubahuser.php?id=<?php echo $data ["id"]; ?>" class="bi bi-pencil-square"></a>
                     </td>
-                    <!-- Modal -->
-                    <div class="modal fade text-center" id="DataDetailUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Data</h1>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="assets/img/logo.png" alt="Profile" class="rounded-circle">
-                              <div class="row">
-                                <div class="col">
-                                  <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label"><strong>ID User</strong></label>                                    
-                                    <p class="border border-secondary rounded">1</p>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label"><strong>Nama Desa</strong></label>
-                                    <p class="border border-secondary rounded">Desa Umbulsari</p>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col">
-                                  <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label"><strong>Email</strong></label>
-                                    <p class="border border-secondary rounded">DesaUmbulsari@gmail.co.id</p>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label"><strong>Alamat</strong></label>
-                                    <p class="border border-secondary rounded">Jalan Ahmad Yani</p>
-                                  </div>
-                                </div>
-                              </div>                                                          
-                            </div>
-                            <div class="modal-footer d-flex justify-content-center">
-                                <a href="ubahuser.php"><button type="button" class="btn btn-primary"> Ubah Data</button></a>
-                            </div>
-
-                          </div>
-                        </div>
-                      </div>
-                      <!--end Modal-->
-
                   </tr>
+                  <?php } ?>
                 </tbody>
               </table>
             </div>

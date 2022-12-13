@@ -1,3 +1,14 @@
+<?php
+
+include_once("koneksi.php");
+
+//ambil dari dari tabel data_wisata
+$query = "SELECT * FROM data_wisata";
+
+$hasil = mysqli_query ($conn, $query);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -114,6 +125,7 @@
 
           <table class="table table-striped table-bordered datatable">
             <thead>
+              
               <tr>
                 <th scope="col" class="text-center">Desa</th>
                 <th scope="col" class="text-center">Nama Wisata</th>
@@ -123,17 +135,19 @@
               </tr>
             </thead>
             <tbody>
+              <?php
+                while ($data=mysqli_fetch_array($hasil)) { ?>
               <tr>
                 <td class="text-center">Desa Umbulsari</th>
-                <td class="text-center">Wisata Bunga</td>
-                <td class="text-center">Jl.Semeru No.177
-                </td>
+                <td class="text-center"><?php echo $data ["nama_wisata"]; ?></td>
+                <td class="text-center"><?php echo $data ["alamat"]; ?></td>
                 <td class="text-center">Disetujui</td>
                 <td class="text-center">
                   <a href="detaildata.php" ><i class="bi bi-eye"></i></a>
                 </td>
-
               </tr>
+              </tr>
+              <?php } ?>
             </tbody>
           </table>
         </div>
