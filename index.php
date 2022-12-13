@@ -109,7 +109,7 @@
                       left: 'center'
                     },
                     series: [{
-                      name: 'Access From',
+                      name: 'Kategori',
                       type: 'pie',
                       radius: ['40%', '70%'],
                       avoidLabelOverlap: false,
@@ -129,23 +129,23 @@
                       },
                       data: [{
                           value: 1048,
-                          name: 'Search Engine'
+                          name: 'Alam'
                         },
                         {
                           value: 735,
-                          name: 'Direct'
+                          name: 'Kreasi'
                         },
                         {
                           value: 580,
-                          name: 'Email'
+                          name: 'Edukasi & Minat Khusus'
                         },
                         {
                           value: 484,
-                          name: 'Union Ads'
+                          name: 'Sejarah & Religi'
                         },
                         {
                           value: 300,
-                          name: 'Video Ads'
+                          name: 'Belanja'
                         }
                       ]
                     }]
@@ -182,28 +182,16 @@
       <div class="row">
         <div class="col col-md-4">
           <div class="card recent-sales overflow-auto">
-            <div class="filter">
-              <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                <li class="dropdown-header text-start">
-                  <h6>Filter</h6>
-                </li>
-                <li><a class="dropdown-item" href="#">Tahun Kemarin</a></li>
-                <li><a class="dropdown-item" href="#">Tahun Ini</a></li>
-              </ul>
-            </div>
 
             <div class="card-body">
-              <h5 class="card-title">Customers <span>| This Year</span></h5>
+              <h5 class="card-title">Wisata</h5>
 
               <div class="d-flex align-items-center">
                 <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                  <i class="bi bi-people"></i>
+                  <i class="bi bi-shop-window"></i>
                 </div>
                 <div class="ps-3">
-                  <h6>1244</h6>
-                  <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
-
+                  <h6>1244 <span>Buah</span></h6>
                 </div>
               </div>
 
@@ -212,54 +200,30 @@
         </div><!-- End Customers Card -->
         <div class="col col-md-4">
           <div class="card recent-sales overflow-auto">
-            <div class="filter">
-              <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                <li class="dropdown-header text-start">
-                  <h6>Filter</h6>
-                </li>
-                <li><a class="dropdown-item" href="#">Tahun Kemarin</a></li>
-                <li><a class="dropdown-item" href="#">Tahun Ini</a></li>
-              </ul>
-            </div>
             <div class="card-body">
-              <h5 class="card-title">Customers <span>| This Year</span></h5>
+              <h5 class="card-title">Pengaduan </h5>
               <div class="d-flex align-items-center">
                 <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                  <i class="bi bi-people"></i>
+                  <i class="bi bi-exclamation-triangle"></i>
                 </div>
                 <div class="ps-3">
-                  <h6>1244</h6>
-                  <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
+                  <h6>1244 <span>Buah</span></h6>
                 </div>
               </div>
             </div>
           </div>
       </div>
         <div class="col col-md-4">
-            <div class="card recent-sales overflow-auto">
-              <div class="filter">
-                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                  <li class="dropdown-header text-start">
-                    <h6>Filter</h6>
-                  </li>
-                  <li><a class="dropdown-item" href="#">Tahun Kemarin</a></li>
-                  <li><a class="dropdown-item" href="#">Tahun Ini</a></li>
-                </ul>
-              </div>
-
+            <div class="card recent-sales overflow-auto">           
               <div class="card-body">
-                <h5 class="card-title">Customers <span>| This Year</span></h5>
+                <h5 class="card-title">Desa</h5>
 
                 <div class="d-flex align-items-center">
                   <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                     <i class="bi bi-people"></i>
                   </div>
                   <div class="ps-3">
-                    <h6>1244</h6>
-                    <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
-
+                    <h6>1244 <span>Buah</span></h6>
                   </div>
                 </div>
 
