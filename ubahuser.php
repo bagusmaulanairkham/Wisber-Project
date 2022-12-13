@@ -101,37 +101,29 @@ $hasil = mysqli_query ($conn, $query);
       <div class="card recent-sales overflow-auto">
         <div class="card-body">
           <h5 class="card-title">Form Ubah Data User</h5>
-          <form>
+          <form method="post" action="prosesubahuser.php">
+            <?php while ($data = mysqli_fetch_array($hasil)) { ?>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Nama Desa</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Alamat</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="text" class="form-control" name="nama_desa" aria-describedby="emailHelp" value="<?php echo $data['nama_desa'] ?>">
             </div>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="email" class="form-control" name="email" aria-describedby="emailHelp" value="<?php echo $data['email'] ?>">
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="Password">
+              <input type="password" class="form-control" name="password">
               <div class="input-group-addon">
                 <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
               </div>
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Konfirmasi Password</label>
-              <input type="password" class="form-control" id="KonfirmasiPassword">
+              <input type="password" class="form-control" name="KonfirmasiPassword">
               <div class="input-group-addon">
                 <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
               </div>
-            </div>
-            <div class="mb-3">
-              <label for="formFile" class="form-label">Foto Profil</label>
-              <input class="form-control" type="file" id="formFile">
             </div>
             <script>
               $(document).ready(function() {
@@ -149,12 +141,14 @@ $hasil = mysqli_query ($conn, $query);
                 });
               });
             </script>
+            <div class="card-footer d-flex justify-content-center">
+              <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
+              <a href="datauser.php"><button type="button" class="btn btn-secondary m-2">Tutup</button></a>
+              <button type="submit" class="btn btn-primary m-2">Ubah</button>
+            </div>
+            <?php } ?>
           </form>
-        </div>
-        <div class="card-footer d-flex justify-content-center">
-          <a href="datauser.php"><button type="button" class="btn btn-secondary m-2">Tutup</button></a>
-          <button type="submit" class="btn btn-primary m-2">Tambah</button>
-        </div>
+        </div>     
       </div>
     </section>
   </main>
