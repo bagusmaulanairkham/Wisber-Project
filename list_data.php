@@ -4,8 +4,10 @@ include_once("koneksi.php");
 
 //ambil dari dari tabel data_wisata
 $query = "SELECT * FROM data_wisata";
+$query2 ="SELECT * FROM user";
 
 $hasil = mysqli_query ($conn, $query);
+$hasil2 = mysqli_query($conn,$query2);
 
 ?>
 
@@ -138,7 +140,14 @@ $hasil = mysqli_query ($conn, $query);
               <?php
                 while ($data=mysqli_fetch_array($hasil)) { ?>
               <tr>
-                <td class="text-center">Desa Umbulsari</th>
+                <?php
+                while ($data2=mysqli_fetch_array($hasil2)) {
+                  if ($data2['id']==$data['id_user']) {
+                   ?>
+                  <td class="text-center"><?php echo $data2 ["nama_desa"]; ?></td>
+                  <?php
+                  }
+                 } ?>
                 <td class="text-center"><?php echo $data ["nama_wisata"]; ?></td>
                 <td class="text-center"><?php echo $data ["alamat"]; ?></td>
                 <td class="text-center">Disetujui</td>
