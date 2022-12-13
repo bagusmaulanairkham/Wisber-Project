@@ -1,3 +1,14 @@
+<?php
+
+include_once("koneksi.php");
+
+//ambil dari dari tabel data_wisata
+$query = "SELECT * FROM data_wisata";
+
+$hasil = mysqli_query ($conn, $query);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
