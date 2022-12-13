@@ -90,38 +90,32 @@
       <div class="card recent-sales overflow-auto">
         <div class="card-body">
           <h5 class="card-title">Form Tambah User</h5>
-          <form>
+          <form action="prosesinputuser.php" method="post">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Nama Desa</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="text" class="form-control" name="nama_desa" aria-describedby="emailHelp">
 
             </div>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Alamat</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
+
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="Password">
+              <input type="password" class="form-control" name="password">
               <div class="input-group-addon">
                 <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
               </div>
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Konfirmasi Password</label>
-              <input type="password" class="form-control" id="KonfirmasiPassword">
+              <input type="password" class="form-control" name="KonfirmasiPassword">
               <div class="input-group-addon">
                 <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
               </div>
             </div>
-            <div class="mb-3">
-              <label for="formFile" class="form-label">Foto Profil</label>
-              <input class="form-control" type="file" id="formFile">
-            </div>
+            
             <script>
               $(document).ready(function() {
                 $("#show_hide_password a").on('click', function(event) {
@@ -138,12 +132,13 @@
                 });
               });
             </script>
+            <div class="card-footer d-flex justify-content-center">
+              <a href="datauser.php"><button type="button" class="btn btn-secondary m-2">Tutup</button></a>
+              <button type="submit" class="btn btn-primary m-2">Tambah</button>
+            </div>
           </form>
         </div>
-        <div class="card-footer d-flex justify-content-center">
-          <a href="datauser.php"><button type="button" class="btn btn-secondary m-2">Tutup</button></a>
-          <button type="submit" class="btn btn-primary m-2">Tambah</button>
-        </div>
+        
       </div>
     </section>
   </main>
