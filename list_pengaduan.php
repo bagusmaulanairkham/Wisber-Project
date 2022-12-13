@@ -136,6 +136,18 @@
                               <p>Desa Dukumencek</p>
                             </div>
                           </div>
+                          <div class="col">
+                            <div class="mb-3">
+                              <label for="exampleFormControlInput1" class="form-label"><strong>Wisata</strong></label>
+                              <p>22 November 2022</p>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="mb-3">
+                              <label for="exampleFormControlInput1" class="form-label"><strong>Alamat</strong></label>
+                              <p>22 November 2022</p>
+                            </div>
+                          </div>
                         </div>
                         <div class="mb-3">
                           <label for="exampleFormControlTextarea" class="form-label"><strong>Isi Pengaduan</strong></label>
