@@ -171,7 +171,7 @@
                         </div>
                     </div>
                     <br>
-                    <p class="fs-6"><strong>Weekday :</strong></p>
+                    <p class="fs-6"><strong>Fasilitas :</strong></p>
                     <div class="row">
                         <div class="col">            
                             <p class="fw-semibold"><i class="bi bi-badge-wc"></i> Toilet</p>
@@ -206,6 +206,18 @@
                         <div class="col">
                             <p class="fw-semibold"><i class="bi bi-wifi"></i> Wifi</p>
                             <p>Ya</p>
+                        </div>
+                    </div>
+                    <p class="fs-6"><strong>Bukti :</strong></p>
+                    <div class="row">
+                        <div class="col">
+                            <img src="assets/img/pantai-bg.jpg" alt="">
+                        </div>
+                        <div class="col">
+                            <img src="assets/img/pantai-bg.jpg" alt="">
+                        </div>
+                        <div class="col">
+                            <img src="assets/img/pantai-bg.jpg" alt="">
                         </div>
                     </div>
                 </div>
