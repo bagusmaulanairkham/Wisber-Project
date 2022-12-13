@@ -81,7 +81,7 @@
 
     <main id="main" class="main">
         <div class="pagetitle">
-            <h1>List Data</h1>
+            <h1>Detail Data</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">Home</a></li>
