@@ -12,13 +12,14 @@ $query = "INSERT INTO user (nama_desa, email, password)
 
 $hasil = mysqli_query ($conn, $query);
 
-if ($password != $Konfirmasi) {    
-    echo "Password tidak sama";
+if ($password != $Konfirmasi) {  
+    echo "<script>alert('Password tidak sama!');window.location='formuser.php';</script>";
 }elseif($hasil) {
-    header ('Location:datauser.php');
+    echo "<script>alert('Data berhasil disimpan');window.location='datauser.php';</script>";
+    
 } 
 else {
-    echo "data gagal";
+    echo "<script>alert('Data gagal');window.location='formuser.php';</script>";
 }
 
 ?>
