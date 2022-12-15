@@ -150,7 +150,7 @@ $hasil2 = mysqli_query($conn,$query2);
                  } ?>
                 <td class="text-center"><?php echo $data ["nama_wisata"]; ?></td>
                 <td class="text-center"><?php echo $data ["alamat"]; ?></td>
-                <td class="text-center">Disetujui</td>
+                <td class="text-center text-success small pt-1 fw-bold">Disetujui</td>
                 <td class="text-center">
                   <a href="detaildata.php" ><i class="bi bi-eye"></i></a>
                   <a href="#" data-bs-toggle="modal" data-bs-target="#modalhapus" ><i class="bi bi-trash"></i></a>

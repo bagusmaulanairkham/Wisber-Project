@@ -927,6 +927,8 @@ h6 {
 
 .dashboard .news img {
   width: 80px;
+  height: 80px;
+  object-fit: cover;
   float: left;
   border-radius: 5px;
 }

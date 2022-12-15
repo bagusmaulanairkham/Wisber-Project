@@ -208,7 +208,7 @@
                             <p>Ya</p>
                         </div>
                     </div>
-                    <p class="fs-6"><strong>Bukti :</strong></p>
+                    <p class="fs-6"><strong>Dokumentasi :</strong></p>
                     <div class="row">
                         <div class="col">
                             <img src="assets/img/pantai-bg.jpg" alt="">

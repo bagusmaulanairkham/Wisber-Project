@@ -111,7 +111,7 @@
                 <td class="text-center">22 November 2022</th>
                 <td class="text-center">Desa Pancakarya</td>
                 <td class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</td>
-                <td class="text-center">Diproses</td>
+                <td class="text-center text-success small pt-1 fw-bold">Diproses</td>
                 <td class="text-center">
                   <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="bi bi-eye"></i></a>
                   <a href="#" data-bs-toggle="modal" data-bs-target="#modalhapus"><i class="bi bi-trash"></i></a>
