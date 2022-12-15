@@ -81,7 +81,101 @@ $hasil2 = mysqli_query($conn,$query2);
   <!-- End Header -->
 
   <aside id="sidebar" class="sidebar">
-    <?php include("sidebar.php") ?>
+    <!-- ======= Sidebar ======= -->
+    <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.php">
+            <i class="bi bi-house-door-fill"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <!-- End Dashboard Nav -->
+
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            data-bs-target="#components-nav"
+            data-bs-toggle="collapse"
+            href="#"
+          >
+            <i class="bi bi-table"></i><span>Wisata</span
+            ><i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul
+            id="components-nav"
+            class="nav-content collapse"
+            data-bs-parent="#sidebar-nav"
+          >
+            <li>
+              <a href="validasi.php">
+                <i class="bi bi-circle"></i><span>Validasi</span>
+              </a>
+            </li>
+            <li>
+              <a href="list_data.php">
+                <i class="bi bi-circle"></i><span>List Data</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- End Components Nav -->
+
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            data-bs-target="#forms-nav"
+            data-bs-toggle="collapse"
+            href="#"
+          >
+            <i class="bi bi-send-exclamation"></i><span>Pengaduan</span
+            ><i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul
+            id="forms-nav"
+            class="nav-content collapse"
+            data-bs-parent="#sidebar-nav"
+          >
+            <li>
+              <a href="list_pengaduan.php">
+                <i class="bi bi-circle"></i><span>List Pengaduan</span>
+              </a>
+            </li>
+            <li>
+              <a href="feedback.php">
+                <i class="bi bi-circle"></i><span>Feedback</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- End Forms Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="datauser.php">
+            <i class="bi bi-people-fill"></i>
+            <span>Data User</span>
+          </a>
+        </li>
+        <!-- End Tables Nav -->
+
+        <li class="nav-heading">Pages</li>
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="profil.php">
+            <i class="bi bi-person-fill"></i>
+            <span>Profil</span>
+          </a>
+        </li>
+        <!-- End Profile Page Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-toggle="modal" data-bs-target="#logoutModal">
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Log Out</span>
+          </a>
+        </li>
+        <!-- End Contact Page Nav -->
+      </ul>
+    <!-- End Sidebar-->
   </aside>
 
   <!-- Small modal -->
