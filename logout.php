@@ -8,7 +8,7 @@
             <div class="modal-body">
                 <p><i class="fa fa-question-circle"></i>Apakah Anda yakin ingin keluar? <br /></p>
                 <div class="actionsBtns d-flex justify-content-center">
-                    <form action="/logout" method="post">
+                    <form action="proseslogout.php" method="post">
                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                         <input type="submit" class="btn btn-default btn-primary" data-dismiss="modal" value="Keluar" />
                     </form>

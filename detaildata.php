@@ -1,3 +1,16 @@
+<?php
+
+include_once("koneksi.php");
+
+//ambil dari dari tabel data_wisata
+$query = "SELECT * FROM data_wisata";
+$query2 ="SELECT * FROM user";
+
+$hasil = mysqli_query ($conn, $query);
+$hasil2 = mysqli_query($conn,$query2);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,17 +110,26 @@
             <div class="card recent-sales overflow-auto">
                 <div class="card-body">
                     <h5 class="card-title">Data Potensi Wisata</h5>
+                    <?php
+                        while ($data=mysqli_fetch_array($hasil)) { ?>
                     <div class="row">
                         <div class="col">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>ID User</strong></label>
-                                <p class="border border-secondary rounded">1</p>
+                                <?php
+                                while ($data2=mysqli_fetch_array($hasil2)) {
+                                    if ($data2['id']==$data['id_user']) {
+                                    ?>
+                                    <p class="border border-secondary rounded"><?php echo $data2 ["id"]; ?></p>
+                                    <?php
+                                    }
+                                    } ?>
                             </div>
                         </div>
                         <div class="col">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Nama Wisata</strong></label>
-                                <p class="border border-secondary rounded">Wisata Bunga</p>
+                                <p class="border border-secondary rounded"><?php echo $data ["nama_wisata"]; ?></p>
                             </div>
                         </div>
                     </div>
@@ -115,13 +137,13 @@
                         <div class="col">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Alamat</strong></label>
-                                <p class="border border-secondary rounded">DesaUmbulsari@gmail.co.id</p>
+                                <p class="border border-secondary rounded"><?php echo $data ["alamat"]; ?></p>
                             </div>
                         </div>
                         <div class="col">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Kategori</strong></label>
-                                <p class="border border-secondary rounded">Jalan Ahmad Yani</p>
+                                <p class="border border-secondary rounded"><?php echo $data ["kategori"]; ?></p>
                             </div>
                         </div>
                     </div>
@@ -129,13 +151,13 @@
                         <div class="col">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Luas</strong></label>
-                                <p class="border border-secondary rounded">1</p>
+                                <p class="border border-secondary rounded"><?php echo $data ["luas"]; ?></p>
                             </div>
                         </div>
                         <div class="col">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Penanggung Jawab</strong></label>
-                                <p class="border border-secondary rounded">Desa Umbulsari</p>
+                                <p class="border border-secondary rounded"><?php echo $data ["penanggung_jawab"]; ?></p>
                             </div>
                         </div>
                     </div>
@@ -221,6 +243,7 @@
                         </div>
                     </div>
                 </div>
+                <?php } ?>
         </section>
     </main>
     <!-- End #main -->
