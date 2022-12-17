@@ -223,7 +223,7 @@ $hasil2 = mysqli_query($conn,$query2);
                         <div class="col">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Nama Wisata</strong></label>
-                                <p class="border border-secondary rounded"><?php echo $data ["nama_wisata"]; ?></p>
+                                <p class="p-2 bg-light border"><?php echo $data ["nama_wisata"]; ?></p>
                             </div>
                         </div>
                     </div>
@@ -231,13 +231,13 @@ $hasil2 = mysqli_query($conn,$query2);
                         <div class="col">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Alamat</strong></label>
-                                <p class="border border-secondary rounded"><?php echo $data ["alamat"]; ?></p>
+                                <p class="p-2 bg-light border"><?php echo $data ["alamat"]; ?></p>
                             </div>
                         </div>
                         <div class="col">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Kategori</strong></label>
-                                <p class="border border-secondary rounded"><?php echo $data ["kategori"]; ?></p>
+                                <p class="p-2 bg-light border"><?php echo $data ["kategori"]; ?></p>
                             </div>
                         </div>
                     </div>
@@ -245,7 +245,7 @@ $hasil2 = mysqli_query($conn,$query2);
                         <div class="col">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Penanggung Jawab</strong></label>
-                                <p class="border border-secondary rounded"><?php echo $data ["penanggung_jawab"]; ?></p>
+                                <p class="p-2 bg-light border"><?php echo $data ["penanggung_jawab"]; ?></p>
                             </div>
                         </div>
                     </div>
@@ -255,13 +255,13 @@ $hasil2 = mysqli_query($conn,$query2);
                         <div class="col">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Dewasa</strong></label>
-                                <p class="border border-secondary rounded">1</p>
+                                <p class="p-2 bg-light border">1</p>
                             </div>
                         </div>
                         <div class="col">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Anak-Anak</strong></label>
-                                <p class="border border-secondary rounded">Wisata Bunga</p>
+                                <p class="p-2 bg-light border">Wisata Bunga</p>
                             </div>
                         </div>
                     </div>
@@ -270,13 +270,13 @@ $hasil2 = mysqli_query($conn,$query2);
                         <div class="col">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Dewasa</strong></label>
-                                <p class="border border-secondary rounded">1</p>
+                                <p class="p-2 bg-light border">1</p>
                             </div>
                         </div>
                         <div class="col">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Anak-Anak</strong></label>
-                                <p class="border border-secondary rounded">Wisata Bunga</p>
+                                <p class="p-2 bg-light border">Wisata Bunga</p>
                             </div>
                         </div>
                     </div>
