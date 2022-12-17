@@ -208,7 +208,7 @@
                 <td class="text-center text-success small pt-1 fw-bold">Diproses</td>
                 <td class="text-center">
                   <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="bi bi-eye"></i></a>
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#modalhapus"><i class="bi bi-trash"></i></a>
+                  
                 </td>
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -267,26 +267,7 @@
                   </div>
                 </div>
               </tr>
-            </tbody>
-            <!--Modal-->
-            <div class="modal" id="modalhapus" tabindex="-1" role="dialog" aria-hidden="true">
-              <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                  <div class="modal-header">                    
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <p><i class="fa fa-question-circle"></i> Apakah Anda yakin ingin menghapus data? <br /></p>
-                    <div class="actionsBtns d-flex justify-content-center">
-                      <form action="/delete" method="post">
-                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-                        <input type="submit" class="btn btn-default btn-primary" data-dismiss="modal" value="Hapus" />
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </tbody>            
           </table>
         </div>
       </div>
