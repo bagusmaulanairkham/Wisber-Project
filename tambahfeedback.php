@@ -67,98 +67,78 @@
   <aside id="sidebar" class="sidebar">
     <!-- ======= Sidebar ======= -->
     <ul class="sidebar-nav" id="sidebar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.php">
-            <i class="bi bi-house-door-fill"></i>
-            <span>Dashboard</span>
-          </a>
-        </li>
-        <!-- End Dashboard Nav -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">
+          <i class="bi bi-house-door-fill"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <!-- End Dashboard Nav -->
 
-        <li class="nav-item">
-          <a
-            class="nav-link collapsed"
-            data-bs-target="#components-nav"
-            data-bs-toggle="collapse"
-            href="#"
-          >
-            <i class="bi bi-table"></i><span>Wisata</span
-            ><i class="bi bi-chevron-down ms-auto"></i>
-          </a>
-          <ul
-            id="components-nav"
-            class="nav-content collapse"
-            data-bs-parent="#sidebar-nav"
-          >
-            <li>
-              <a href="validasi.php">
-                <i class="bi bi-circle"></i><span>Validasi</span>
-              </a>
-            </li>
-            <li>
-              <a href="list_data.php">
-                <i class="bi bi-circle"></i><span>List Data</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <!-- End Components Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-table"></i><span>Wisata</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="validasi.php">
+              <i class="bi bi-circle"></i><span>Validasi</span>
+            </a>
+          </li>
+          <li>
+            <a href="list_data.php">
+              <i class="bi bi-circle"></i><span>List Data</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- End Components Nav -->
 
-        <li class="nav-item">
-          <a
-            class="nav-link collapsed"
-            data-bs-target="#forms-nav"
-            data-bs-toggle="collapse"
-            href="#"
-          >
-            <i class="bi bi-send-exclamation"></i><span>Pengaduan</span
-            ><i class="bi bi-chevron-down ms-auto"></i>
-          </a>
-          <ul
-            id="forms-nav"
-            class="nav-content collapse"
-            data-bs-parent="#sidebar-nav"
-          >
-            <li>
-              <a href="list_pengaduan.php">
-                <i class="bi bi-circle"></i><span>List Pengaduan</span>
-              </a>
-            </li>
-            <li>
-              <a href="feedback.php">
-                <i class="bi bi-circle"></i><span>Feedback</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <!-- End Forms Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-send-exclamation"></i><span>Pengaduan</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="list_pengaduan.php">
+              <i class="bi bi-circle"></i><span>List Pengaduan</span>
+            </a>
+          </li>
+          <li>
+            <a href="feedback.php">
+              <i class="bi bi-circle"></i><span>Feedback</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- End Forms Nav -->
 
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="datauser.php">
-            <i class="bi bi-people-fill"></i>
-            <span>Data User</span>
-          </a>
-        </li>
-        <!-- End Tables Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="datauser.php">
+          <i class="bi bi-people-fill"></i>
+          <span>Data User</span>
+        </a>
+      </li>
+      <!-- End Tables Nav -->
 
-        <li class="nav-heading">Pages</li>
+      <li class="nav-heading">Pages</li>
 
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="profil.php">
-            <i class="bi bi-person-fill"></i>
-            <span>Profil</span>
-          </a>
-        </li>
-        <!-- End Profile Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="profil.php">
+          <i class="bi bi-person-fill"></i>
+          <span>Profil</span>
+        </a>
+      </li>
+      <!-- End Profile Page Nav -->
 
-        <li class="nav-item">
-          <a class="nav-link collapsed" data-bs-toggle="modal" data-bs-target="#logoutModal">
-            <i class="bi bi-box-arrow-right"></i>
-            <span>Log Out</span>
-          </a>
-        </li>
-        <!-- End Contact Page Nav -->
-      </ul>
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-toggle="modal" data-bs-target="#logoutModal">
+          <i class="bi bi-box-arrow-right"></i>
+          <span>Log Out</span>
+        </a>
+      </li>
+      <!-- End Contact Page Nav -->
+    </ul>
     <!-- End Sidebar-->
   </aside>
 
@@ -169,12 +149,13 @@
 
   <main id="main" class="main">
     <div class="pagetitle">
-      <h1>Tambah User</h1>
+      <h1>Tambah Feedback</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item active"><a href="datauser.php">Kelola User</a></li>
-          <li class="breadcrumb-item active">Tambah User</li>
+          <li class="breadcrumb-item">Pengaduan</li>
+          <li class="breadcrumb-item active"><a href="list_pengaduan.php">List Pengaduan</a></li>
+          <li class="breadcrumb-item active">Tambah Feedback</li>
         </ol>
       </nav>
     </div>
@@ -183,56 +164,31 @@
     <section class="section dashboard">
       <div class="card recent-sales overflow-auto">
         <div class="card-body">
-          <h5 class="card-title">Form Tambah User</h5>
-          <form action="prosesinputuser.php" method="post">
+          <h5 class="card-title">Form Feedback</h5>
+          <form action="#" method="post">
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Nama Desa</label>
-              <input type="text" class="form-control" name="nama_desa" aria-describedby="emailHelp">
-
-            </div>
-
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email</label>
-              <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
+              <label for="feedback" class="form-label">Isi Feedback</label>
+              <textarea class="form-control" id="feedback" rows="3"></textarea>
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" name="password">
-              <div class="input-group-addon">
-                <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="diproses" id="diproses" value="option1">
+                <label class="form-check-label" for="diproses">Diproses</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="ditolak" id="ditolak" value="option2">
+                <label class="form-check-label" for="ditolak">Ditolak</label>
               </div>
             </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Konfirmasi Password</label>
-              <input type="password" class="form-control" name="KonfirmasiPassword">
-              <div class="input-group-addon">
-                <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
-              </div>
-            </div>
-            
-            <script>
-              $(document).ready(function() {
-                $("#show_hide_password a").on('click', function(event) {
-                  event.preventDefault();
-                  if ($('#show_hide_password input').attr("type") == "text") {
-                    $('#show_hide_password input').attr('type', 'password');
-                    $('#show_hide_password i').addClass("fa-eye-slash");
-                    $('#show_hide_password i').removeClass("fa-eye");
-                  } else if ($('#show_hide_password input').attr("type") == "password") {
-                    $('#show_hide_password input').attr('type', 'text');
-                    $('#show_hide_password i').removeClass("fa-eye-slash");
-                    $('#show_hide_password i').addClass("fa-eye");
-                  }
-                });
-              });
-            </script>
+
+
             <div class="card-footer d-flex justify-content-center">
-              <a href="datauser.php"><button type="button" class="btn btn-secondary m-2">Tutup</button></a>
-              <button type="submit" class="btn btn-primary m-2">Tambah</button>
+              <a href="list_pengaduan.php"><button type="button" class="btn btn-secondary m-2">Tutup</button></a>
+              <button type="submit" class="btn btn-primary m-2">Kirim</button>
             </div>
           </form>
         </div>
-        
+
       </div>
     </section>
   </main>
