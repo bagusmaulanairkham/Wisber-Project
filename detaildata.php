@@ -111,7 +111,7 @@ $hasil2 = mysqli_query($conn,$query2);
                 <div class="card-body">
                     <h5 class="card-title">Data Potensi Wisata</h5>
                     <?php
-                        while ($data=mysqli_fetch_array($hasil)) { ?>
+                        $data=mysqli_fetch_array($hasil) ?>
                     <div class="row">
                         <div class="col">
                             <div class="mb-3">
@@ -148,12 +148,6 @@ $hasil2 = mysqli_query($conn,$query2);
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col">
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label"><strong>Luas</strong></label>
-                                <p class="border border-secondary rounded"><?php echo $data ["luas"]; ?></p>
-                            </div>
-                        </div>
                         <div class="col">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Penanggung Jawab</strong></label>
@@ -243,7 +237,6 @@ $hasil2 = mysqli_query($conn,$query2);
                         </div>
                     </div>
                 </div>
-                <?php } ?>
         </section>
     </main>
     <!-- End #main -->

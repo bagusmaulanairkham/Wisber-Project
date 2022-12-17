@@ -84,6 +84,10 @@ $hasil2 = mysqli_query($conn,$query2);
     <?php include("sidebar.php") ?>
   </aside>
 
+  <div class="container">
+    <?php include("logout.php") ?>
+  </div>
+
   <!-- Small modal -->
   <div class="container">
     <div class="modal" id="logoutModal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -96,7 +100,7 @@ $hasil2 = mysqli_query($conn,$query2);
           <div class="modal-body">
             <p><i class="fa fa-question-circle"></i>Apakah Anda yakin ingin keluar? <br /></p>
             <div class="actionsBtns d-flex justify-content-center">
-              <form action="/logout" method="post">
+              <form action="logout.php" method="post">
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                 <input type="submit" class="btn btn-default btn-primary" data-dismiss="modal" value="Keluar" />
               </form>
@@ -127,7 +131,6 @@ $hasil2 = mysqli_query($conn,$query2);
 
           <table class="table table-striped table-bordered datatable">
             <thead>
-              
               <tr>
                 <th scope="col" class="text-center">Desa</th>
                 <th scope="col" class="text-center">Nama Wisata</th>
@@ -136,30 +139,31 @@ $hasil2 = mysqli_query($conn,$query2);
                 <th scope="col" class="text-center">Aksi</th>
               </tr>
             </thead>
+            
             <tbody>
               <?php
                 while ($data=mysqli_fetch_array($hasil)) { ?>
               <tr>
                 <?php
-                while ($data2=mysqli_fetch_array($hasil2)) {
-                  if ($data2['id']==$data['id_user']) {
-                   ?>
-                  <td class="text-center"><?php echo $data2 ["nama_desa"]; ?></td>
-                  <?php
-                  }
-                 } ?>
+                  while ($data2=mysqli_fetch_array($hasil2)) {
+                    if ($data2['id']==$data['id_user']) { ?>
+                      <td class="text-center"><?php echo $data2 ["nama_desa"]; ?></td>
+                <?php
+                      }
+                    } ?>
                 <td class="text-center"><?php echo $data ["nama_wisata"]; ?></td>
                 <td class="text-center"><?php echo $data ["alamat"]; ?></td>
-                <td class="text-center text-success small pt-1 fw-bold">Disetujui</td>
+                <td class="text-center text-success small pt-1 fw-bold"><?php echo $data ["status_wisata"]; ?></td>
                 <td class="text-center">
-                  <a href="detaildata.php" ><i class="bi bi-eye"></i></a>
+                  <a href="detaildata.php?id=<?php echo $data ["id_user"]; ?>"><i class="bi bi-eye"></i></a>
                   <a href="#" data-bs-toggle="modal" data-bs-target="#modalhapus" ><i class="bi bi-trash"></i></a>
                 </td>
               </tr>
-              </tr>
-              <?php } ?>
+              <?php
+                    } ?>
             </tbody>
           </table>
+
           <!--Modal-->
           <div class="modal" id="modalhapus" tabindex="-1" role="dialog" aria-hidden="true">
               <div class="modal-dialog modal-sm">
@@ -170,7 +174,7 @@ $hasil2 = mysqli_query($conn,$query2);
                   <div class="modal-body">
                     <p><i class="fa fa-question-circle"></i> Apakah Anda yakin ingin menghapus data? <br /></p>
                     <div class="actionsBtns d-flex justify-content-center">
-                      <form action="/logout" method="post">
+                      <form action="logout.php" method="post">
                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                         <input type="submit" class="btn btn-default btn-primary" data-dismiss="modal" value="Hapus" />
                       </form>
