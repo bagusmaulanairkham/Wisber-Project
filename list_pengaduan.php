@@ -1,3 +1,14 @@
+<?php
+
+include_once("koneksi.php");
+
+//ambil dari dari tabel user
+$query = "SELECT * FROM pengaduan, user WHERE pengaduan.id_user = user.id_user";
+
+$hasil = mysqli_query ($conn, $query);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -200,10 +211,12 @@
               </tr>
             </thead>
             <tbody>
+              <?php
+              while ($data=mysqli_fetch_array($hasil)) { ?>
               <tr>
                 <td class="text-center">22 November 2022</th>
-                <td class="text-center">Desa Dukuhmencek</td>
-                <td class="text-center">Lorem ipsum dolor sit amet consectetur...</td>
+                <td class="text-center"><?php echo $data ["penanggung_jawab_desa"]; ?></td>
+                <td class="text-center"><?php echo $data ["pesan"]; ?></td>
                 <td class="text-center">
                   <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="bi bi-eye"></i></a>
 
@@ -227,26 +240,25 @@
                           <div class="col">
                             <div class="mb-3">
                               <label for="exampleFormControlInput1" class="form-label"><strong>User</strong></label>
-                              <p>Desa Dukumencek</p>
+                              <p><?php echo $data ["penanggung_jawab_desa"]; ?></p>
                             </div>
                           </div>
                           <div class="col">
                             <div class="mb-3">
                               <label for="exampleFormControlInput1" class="form-label"><strong>Wisata</strong></label>
-                              <p>22 November 2022</p>
+                              <p><?php echo $data ["wisata"]; ?></p>
                             </div>
                           </div>
                           <div class="col">
                             <div class="mb-3">
                               <label for="exampleFormControlInput1" class="form-label"><strong>Alamat</strong></label>
-                              <p>22 November 2022</p>
+                              <p><?php echo $data ["alamat"]; ?></p>
                             </div>
                           </div>
                         </div>
                         <div class="mb-3">
                           <label for="exampleFormControlTextarea" class="form-label"><strong>Isi Pengaduan</strong></label>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quam laborum,
-                            eius excepturi eveniet dolorum quidem repellendus, impedit aliquid minima ea consequatur? Quod dolores ratione repellat mollitia veritatis quisquam praesentium.</p>
+                          <p><?php echo $data ["pesan"]; ?></p>
                         </div>
                         <div class="mb-3">
                           <label for="buktiPengaduan" class="form-label"><strong>Bukti Pengaduan</strong></label>
@@ -255,9 +267,7 @@
                           </div>
                         </div>
                         <p class="mb-3">
-                          <a class="btn btn-primary" href="tambahfeedback.php">
-                            Tambah feedback
-                          </a>
+                          <a href="tambahfeedback.php?id=<?php echo $data ['id_pengaduan']; ?>" class="btn btn-primary">Tambah Feedback</a>
                         </p>
                         
                       </div>
@@ -265,8 +275,8 @@
                   </div>
                 </div>
 
-
               </tr>
+              <?php } ?>
             </tbody>
           </table>
         </div>

@@ -3,7 +3,7 @@
 include_once("koneksi.php");
 
 //ambil dari dari tabel user
-$query = "SELECT * FROM user";
+$query = "SELECT * FROM user, desa WHERE user.id_desa = desa.id_desa";
 
 $hasil = mysqli_query ($conn, $query);
 
@@ -219,9 +219,9 @@ $hasil = mysqli_query ($conn, $query);
                 <thead>
                   <tr>
                     <th scope="col" class="text-center">ID</th>
-                    <th scope="col" class="text-center">Nama</th>
+                    <th scope="col" class="text-center">Nama Desa</th>
                     <th scope="col" class="text-center">Penanggung jawab</th>
-                    <th scope="col" class="text-center">kepala desa</th>
+                    <th scope="col" class="text-center">Kepala Desa</th>
                     <th scope="col" class="text-center">Email</th>
                     <th scope="col" class="text-center">Aksi</th>
                   </tr>
@@ -230,11 +230,13 @@ $hasil = mysqli_query ($conn, $query);
                   <?php
                   while ($data=mysqli_fetch_array($hasil)) { ?>
                   <tr>
-                    <th scope="row" class="text-center"><a href="#"><?php echo $data ["id"]; ?></a></th>
+                    <th scope="row" class="text-center"><a href="#"><?php echo $data ["id_user"]; ?></a></th>
                     <td class="text-center"><?php echo $data ["nama_desa"]; ?></td>
+                    <td class="text-center"><?php echo $data ["penanggung_jawab_desa"]; ?></td>
+                    <td class="text-center"><?php echo $data ["kepala_desa"]; ?></td>
                     <td class="text-center"><?php echo $data ["email"]; ?></td>
                     <td class="text-center">                
-                      <a href="ubahuser.php?id=<?php echo $data ["id"]; ?>" class="bi bi-pencil-square"></a>
+                      <a href="ubahuser.php?id=<?php echo $data ["id_user"]; ?>" class="bi bi-pencil-square"></a>
                     </td>
                   </tr>
                   <?php } ?>

@@ -8,7 +8,7 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 $Konfirmasi=$_POST['KonfirmasiPassword'];
 
-$query = "UPDATE user SET nama_desa='$nama_desa', email='$email', password='$password' WHERE id=$id";
+$query = "UPDATE user SET nama_desa='$nama_desa', email='$email', password='$password' WHERE id_user=$id";
 
 $hasil = mysqli_query ($conn, $query);
 

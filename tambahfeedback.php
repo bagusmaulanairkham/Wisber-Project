@@ -165,10 +165,10 @@
       <div class="card recent-sales overflow-auto">
         <div class="card-body">
           <h5 class="card-title">Form Feedback</h5>
-          <form action="#" method="post">
+          <form method="post" action="prosestambahfeedback.php">
             <div class="mb-3">
               <label for="feedback" class="form-label">Isi Feedback</label>
-              <textarea class="form-control" id="feedback" rows="3"></textarea>
+              <textarea name="feedback" class="form-control" id="feedback" rows="3"></textarea>
             </div>
             <div class="mb-3">
               <div class="form-check form-check-inline">
@@ -183,6 +183,7 @@
 
 
             <div class="card-footer d-flex justify-content-center">
+              <input type="hidden" name="id" value="<?php echo $data['id_user'] ?>">
               <a href="list_pengaduan.php"><button type="button" class="btn btn-secondary m-2">Tutup</button></a>
               <button type="submit" class="btn btn-primary m-2">Kirim</button>
             </div>

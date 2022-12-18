@@ -1,3 +1,14 @@
+<?php
+
+include_once("koneksi.php");
+
+//ambil dari dari tabel pekerjaan
+$query = "SELECT * FROM admin";
+
+$hasil = mysqli_query ($conn, $query);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -163,6 +174,8 @@
     <!-- End Page Title -->
 
     <section class="section profile">
+      <?php
+      while ($data=mysqli_fetch_array($hasil)) { ?>
       <div class="row">
         <div class="col-xl-4">
 
@@ -199,20 +212,18 @@
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Email</div>
-                    <div class="col-lg-9 col-md-8">k.anderson@example.com</div>
+                    <div class="col-lg-9 col-md-8"><?php echo $data ["email"]; ?></div>
                   </div>
 
                 </div>
 
-
-
                 <div class="tab-pane fade pt-3" id="profile-change-password">
                   <!-- Change Password Form -->
-                  <form>
+                  <form method="post" action="prosesubahprofil.php">
                     <div class="row mb-3">
                       <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="email" type="email" class="form-control" id="Email" value="k.anderson@example.com">
+                        <input name="email" type="email" class="form-control" id="Email" value="<?php echo $data ["email"]; ?>">
                       </div>
                     </div>
 
@@ -238,6 +249,7 @@
                     </div>
 
                     <div class="text-center">
+                      <input type="hidden" name="id" value="<?php echo $data['id_admin'] ?>">
                       <button type="submit" class="btn btn-primary">Kirim</button>
                     </div>
                   </form><!-- End Change Password Form -->
@@ -251,6 +263,7 @@
 
         </div>
       </div>
+      <?php } ?>
     </section>
   </main>
   <!-- End #main -->

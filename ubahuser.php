@@ -3,9 +3,9 @@
 include_once ("koneksi.php");
 $id = $_GET['id'];
 
-$query = "SELECT * FROM user WHERE id=".$id;
+$query = "SELECT * FROM user, desa WHERE user.id_desa = desa.id_desa and id_user=".$id;
 
-$hasil = mysqli_query ($conn, $query);
+$hasil = mysqli_query($conn, $query);
 
 ?>
 
@@ -236,7 +236,7 @@ $hasil = mysqli_query ($conn, $query);
               });
             </script>
             <div class="card-footer d-flex justify-content-center">
-              <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
+              <input type="hidden" name="id" value="<?php echo $data['id_user'] ?>">
               <a href="datauser.php"><button type="button" class="btn btn-secondary m-2">Tutup</button></a>
               <button type="submit" class="btn btn-primary m-2">Ubah</button>
             </div>

@@ -42,6 +42,7 @@
   <main>
     <div class="container">
 
+    <br/>
       <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
         <div class="container">
           <div class="row justify-content-center">
@@ -62,13 +63,26 @@
                     <h5 class="card-title text-center pb-0 fs-4">Selamat Datang</h5>
                     <p class="text-center small">Silahkan masukkan email & password untuk login</p>
                   </div>
-
-                  <form class="row g-3 needs-validation" novalidate>
+                  <br/>
+                  <!-- cek pesan notifikasi -->
+                  <?php 
+                  if(isset($_GET['pesan'])){
+                    if($_GET['pesan'] == "gagal"){
+                      echo "Login gagal! Email dan password salah!";
+                    }else if($_GET['pesan'] == "logout"){
+                      echo "Anda telah berhasil logout";
+                    }else if($_GET['pesan'] == "belum_login"){
+                      echo "Anda harus login untuk mengakses halaman admin";
+                    }
+                  }
+                  ?>
+                  <br/>
+                  <form method="post" action="proseslogin.php" class="row g-3 needs-validation" novalidate>
 
                     <div class="col-12">
                       	<label for="yourUsername" class="form-label">Email</label>
-  						<input type="email" class="form-control" id="exampleFormControlInput1" required>
-						<div class="invalid-feedback">Tolong masukkan email!</div>
+  						          <input type="email" name="email" class="form-control" id="exampleFormControlInput1" required>
+						            <div class="invalid-feedback">Tolong masukkan email!</div>
                     </div>
 
                     <div class="col-12">
