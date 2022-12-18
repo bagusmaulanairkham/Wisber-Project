@@ -58,7 +58,7 @@
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle" />
             <span class="d-none d-md-block ps-2">
-              Admin</span> </a><!-- End Profile Iamge Icon -->
+              Desa umbulsari</span> </a><!-- End Profile Iamge Icon -->
         </li>
         <!-- End Profile Nav -->
       </ul>
@@ -141,7 +141,7 @@
 
               <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
               <h2>Sujadi</h2>
-              <h3>Desa Kaliwining</h3>          
+              <h3>Desa Umbulsarigit</h3>          
             </div>
           </div>
 
