@@ -220,6 +220,8 @@ $hasil = mysqli_query ($conn, $query);
                   <tr>
                     <th scope="col" class="text-center">ID</th>
                     <th scope="col" class="text-center">Nama</th>
+                    <th scope="col" class="text-center">Penanggung jawab</th>
+                    <th scope="col" class="text-center">kepala desa</th>
                     <th scope="col" class="text-center">Email</th>
                     <th scope="col" class="text-center">Aksi</th>
                   </tr>
