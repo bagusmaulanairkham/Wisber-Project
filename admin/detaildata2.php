@@ -264,13 +264,13 @@
                         <div class="col">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Dewasa</strong></label>
-                                <p class="border border-secondary rounded">1</p>
+                                <p class="p-2 bg-light border">1</p>
                             </div>
                         </div>
                         <div class="col">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Anak-Anak</strong></label>
-                                <p class="border border-secondary rounded">Wisata Bunga</p>
+                                <p class="p-2 bg-light border">Wisata Bunga</p>
                             </div>
                         </div>
                     </div>
@@ -279,13 +279,13 @@
                         <div class="col">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Dewasa</strong></label>
-                                <p class="border border-secondary rounded">1</p>
+                                <p class="p-2 bg-light border">1</p>
                             </div>
                         </div>
                         <div class="col">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Anak-Anak</strong></label>
-                                <p class="border border-secondary rounded">Wisata Bunga</p>
+                                <p class="p-2 bg-light border">Wisata Bunga</p>
                             </div>
                         </div>
                     </div>
