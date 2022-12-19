@@ -3,8 +3,8 @@
 include_once("koneksi.php");
 
 //ambil dari dari tabel data_wisata
-$query = "SELECT * FROM data_wisata";
-$query2 ="SELECT * FROM user";
+$query = "SELECT * FROM data_wisata, user WHERE data_wisata.id_user = user.id_user";
+$query2 ="SELECT * FROM desa";
 
 $hasil = mysqli_query ($conn, $query);
 $hasil2 = mysqli_query($conn,$query2);
@@ -240,7 +240,7 @@ $hasil2 = mysqli_query($conn,$query2);
               <tr>
                 <?php
                   while ($data2=mysqli_fetch_array($hasil2)) {
-                    if ($data2['id']==$data['id_user']) { ?>
+                    if ($data2['id_desa']==$data['id_desa']) { ?>
                       <td class="text-center"><?php echo $data2 ["nama_desa"]; ?></td>
                 <?php
                       }
